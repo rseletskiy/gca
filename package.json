@@ -1,0 +1,37 @@
+{
+  "name": "goldencubeacademy",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "serve": "parcel ./src/index.html -p 5500",
+    "prebuild-dev": "shx rm -rf dist/*",
+    "build-dev": "parcel build ./src/index.html --no-optimize --public-url ./",
+    "prebuild": "shx rm -rf dist/*",
+    "build": "parcel build ./src/index.html --public-url ./",
+    "push-gh-pages": "push-dir --dir=dist --branch=gh-pages --cleanup --verbose"
+  },
+  "staticFiles": {
+    "staticOutPath": "./src/assets/models",
+    "staticPath": "./src/assets/models"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.13",
+    "buffer": "^5.7.1",
+    "parcel": "2.8.1",
+    "parcel-reporter-static-files-copy": "^1.4.0",
+    "postcss": "8.4.20",
+    "shx": "0.3.4",
+    "tailwindcss": "3.2.4"
+  },
+  "dependencies": {
+    "@google/model-viewer": "^2.1.1",
+    "animejs": "^3.2.1",
+    "aos": "^2.3.4",
+    "leaflet": "1.9.3",
+    "normalize.css": "8.0.1",
+    "swiper": "8.4.5"
+  }
+}
