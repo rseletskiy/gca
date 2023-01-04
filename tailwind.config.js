@@ -55,6 +55,7 @@ module.exports = {
         "color-200": "#DDEBF6",
         "color-300": "#8A949F",
         "color-400": "#313552",
+        "color-gray": "#8A949F",
         "color-dark": "#313552",
         "color-blue": "#0F90D1",
         "color-blue-dark": "#006DA8",

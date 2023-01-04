@@ -303,7 +303,7 @@ img.user-icon-info__img {
 }
 
 .program-card__oldprice {
-    @apply font-semibold text-color-dark absolute bottom-0 right-0 translate-y-[100%] text-base ml-3 tracking-tighter -sm:ml-0
+    @apply font-semibold text-color-dark absolute bottom-0 left-0 translate-y-[100%] text-base tracking-tighter -sm:ml-0
 }
 
 strong.program-card__oldprice span:not(.currency) {
@@ -568,6 +568,10 @@ strong.program-card__oldprice span.currency {
 
 .news-item:first-child {
     @apply p-12 -sm:p-6
+}
+
+footer {
+    @apply border-t border-t-color-200
 }
 
 .footer-logo {
@@ -931,7 +935,6 @@ select.dropdown {
 }
 
 .primary-news__media {
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     @apply w-[57.34375%] after:block after:pb-[59.264305%] relative flex rounded-[20px] overflow-hidden -md:w-full -md:mb-4 
 }
 
@@ -952,15 +955,19 @@ select.dropdown {
 }
 
 .news-link {
-    @apply flex items-center w-max font-bold text-xs leading-[1.5em] uppercase transition-all text-color-blue hover:text-color-blue-dark -sm:text-[10px] -sm:leading-[1.4em]
+    @apply flex items-center w-max font-bold text-xs leading-[1.5em] uppercase transition-all text-color-blue hover:text-color-blue-dark -sm:text-[10px] -sm:leading-[1.4em] 
 }
 
 .news-link svg {
     @apply ml-[10px] transition-all
 }
 
-.news-link:hover svg {
-    @apply translate-x-2
+.news-link svg path {
+    @apply transition-all
+}
+
+.news-link:hover svg path {
+    @apply fill-color-blue-dark
 }
 
 .news-page__label {
@@ -976,7 +983,6 @@ select.dropdown {
 }
 
 .news-widget__media {
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     @apply relative w-full before:block before:pb-[59.2592592%] flex rounded-[20px] overflow-hidden mb-8 -sm:mb-4;
 }
 
@@ -1026,8 +1032,12 @@ select.dropdown {
     @apply ml-[10px] transition-all
 }
 
-.bg-news-link:hover svg {
-    @apply translate-x-2
+.bg-news-link svg path {
+    @apply transition-all
+}
+
+.bg-news-link:hover svg path {
+    @apply fill-color-orange-dark
 }
 
 .breadcrumbs {
@@ -1055,12 +1065,10 @@ select.dropdown {
 }
 
 .post {
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     @apply bg-white rounded-[20px]
 }
 
 .post__media {
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     @apply relative before:block before:pb-[45.3125%] flex rounded-[20px] overflow-hidden -sm:before:pb-[136.98630136%]
 }
 
@@ -1113,7 +1121,6 @@ select.dropdown {
 }
 
 .similar-news-item {
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     @apply flex relative before:block before:pb-[100%] rounded-[20px] overflow-hidden
 }
 
@@ -1128,7 +1135,7 @@ select.dropdown {
 }
 
 .similar-news-item img {
-    @apply absolute top-0 left-0 w-full h-full object-cover object-center transition-all
+    @apply absolute top-0 left-0 w-full h-full object-cover object-center transition-all rounded-[20px]
 }
 
 .similar-news-item:hover img {
@@ -1222,7 +1229,6 @@ select.dropdown {
 }
 
 .table-wrapper {
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     @apply bg-white py-4 px-8 rounded-[20px] -md:overflow-auto -sm:py-2 -sm:px-4
 }
 
@@ -1277,11 +1283,11 @@ select.dropdown {
 }
 
 .office__social-link {
-    @apply relative w-8 h-8 flex items-center justify-center transition-all mr-1 -sm:w-6 -sm:h-6 -sm:text-[36px] -sm:mr-2 align-middle
+    @apply relative w-8 h-8 leading-[32px] flex items-center justify-center transition-all mr-1 -sm:w-6 -sm:h-6 -sm:text-[36px] -sm:leading-[24px] -sm:mr-2 align-middle
 }
 
 .office__social-link svg {
-    @apply w-[14px] h-[14px]
+    @apply w-[14px] -mb-[23px] h-8 -sm:h-6 -sm:-mb-[17px]
 }
 
 .office__social-link::before {
@@ -1298,7 +1304,7 @@ select.dropdown {
 }
 
 .c-socials__link {
-    @apply relative w-12 h-12 flex items-center justify-center -sm:w-8 -sm:h-8  transition-all align-middle
+    @apply relative w-12 h-12 leading-[48px] flex items-center justify-center -sm:w-8 -sm:h-8 -sm:leading-[32px]  transition-all align-middle
 }
 
 .c-socials__link::before {
@@ -1306,9 +1312,9 @@ select.dropdown {
     @apply text-[64px] leading-[1em] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-1 -sm:text-[48px]
 }
 
-/* .c-socials__link svg {
-    @apply -sm:w-[10px] -sm:h-auto
-} */
+.c-socials__link svg {
+    @apply h-12 -mb-[37px] -sm:h-8 -sm:-mb-[25px]
+}
 
 .contacts-backlog {
     @apply w-[42.1875%] h-[100vh] fixed top-0 right-0 bg-color-dark -z-1
@@ -1319,11 +1325,11 @@ select.dropdown {
 }
 
 .form-field input {
-    @apply w-full h-14 rounded-[50px] bg-color-dark border border-white px-6 text-white outline-none -sm:h-11 -sm:px-4 -sm:text-sm
+    @apply w-full h-14 rounded-[50px] bg-color-dark border transition-all hover:border-color-blue focus:border-color-blue border-white px-6 text-white outline-none -sm:h-11 -sm:px-4 -sm:text-sm
 }
 
 .form-field textarea {
-    @apply  w-full h-[104px] rounded-[28px] bg-color-dark border border-white px-6 py-4 text-white outline-none resize-none -sm:h-[84px]
+    @apply  w-full h-[104px] rounded-[28px] bg-color-dark border transition-all hover:border-color-blue focus:border-color-blue border-white px-6 py-4 text-white outline-none resize-none -sm:h-[84px] -sm:rounded-[22px] -sm:py-3 -sm:px-4 -sm:text-sm
 }
 
 .form-field textarea::-webkit-scrollbar {
@@ -1349,7 +1355,7 @@ input.check:focus + label {
 
 #check + label,
 .check + label {
-    @apply block border border-white w-5 min-w-[20px] h-5 rounded-[2px] cursor-pointer transition-all
+    @apply block border border-white w-5 min-w-[20px] h-5 rounded-[2px] cursor-pointer transition-all -sm:w-4 -sm:min-w-[16px] -sm:h-4 -sm:-mt-[1px]
 }
 
 #check + label:active,
@@ -1387,6 +1393,11 @@ input.check:focus + label {
     @apply text-white
 }
 
+.c-dark .dropdown > span:hover,
+.c-dark .dropdown.open > span {
+    @apply bg-[#505576]
+}
+
 #contacts-map { 
     @apply h-[566px]  rounded-t-[30px] -sm:rounded-t-none -sm:h-[100vw]
 }
@@ -1404,7 +1415,7 @@ input.check:focus + label {
 }
 
 .pagination-list__link {
-    @apply w-[50px] min-w-[50px] h-[50px] rounded-[50%] flex text-center items-center justify-center transition-all text-sm leading-[1.5em] font-bold hover:text-color-blue -sm:w-[33px] -sm:min-w-[33px] -sm:h-[33px] -sm:text-xs -sm:leading-[1.5em]
+    @apply w-[50px] min-w-[50px] h-[50px] rounded-[50%] text-color-dark flex text-center items-center justify-center transition-all text-sm leading-[1.5em] hover:bg-color-200 font-bold active:text-color-gray -sm:w-[41px] -sm:min-w-[41px] -sm:h-[41px] -sm:text-xs -sm:leading-[1.5em]
 }
 
 .pagination-list__link.active {
@@ -1419,8 +1430,8 @@ input.check:focus + label {
     @apply transition-all
 }
 
-.pagination-arr:hover svg path {
-    @apply fill-color-blue
+.pagination-arr:active svg path {
+    @apply fill-color-gray
 }
 
 .pure-table-wrapper {
@@ -1435,6 +1446,11 @@ input.check:focus + label {
     @apply bg-white px-8 py-4 text-left text-base text-color-dark font-bold border-b border-b-color-400 -sm:text-sm -sm:py-[12px] -sm:px-4
 }
 
+.pure-table th:not(:last-child),
+.pure-table td:not(:last-child) {
+    @apply border-r border-r-color-200
+}
+
 .pure-table td {
     @apply bg-white px-8 py-3 text-base text-color-dark -sm:text-sm -sm:py-2 -sm:px-4
 }
@@ -1446,8 +1462,6 @@ input.check:focus + label {
 .m-full-container.container {
     @apply -sm:w-full -sm:p-0 -sm:pl-4
 }
-
-
 
 @media (max-width: 1024px) {
     .news-list {
