@@ -122,6 +122,7 @@ const waySlider = new Swiper(".js-way-slider", {
   duration: 500,
   slidesPerView: 1,
   allowTouchMove: false,
+  autoHeight: true,
   on: {
     slideChangeTransitionStart: function(e) {
       if (e.activeIndex === 0) {

@@ -48,7 +48,7 @@ body::before {
 
 .btn-border-sm {
     transition: all .4s ease;
-    @apply text-color-blue uppercase text-[12px] py-3 px-6 border border-color-blue rounded-[50px] font-semibold block w-max hover:bg-color-blue hover:text-white whitespace-nowrap
+    @apply text-color-blue uppercase text-[12px] py-3 px-6 border border-color-blue rounded-[50px] font-semibold block w-max hover:bg-color-blue hover:text-white whitespace-nowrap -sm:py-[10px] -sm:px-4 -sm:text-[10px] -sm:leading-[1.5em]
 }
 
 .title-1 {
@@ -353,11 +353,11 @@ strong.program-card__oldprice span.currency {
 }
 
 .way-tab {
-    @apply flex items-center justify-center min-w-[210px] relative py-4 cursor-pointer text-color-gray after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-full  after:transition-all after:bg-transparent transition-all -lg:text-sm -lg:min-w-[175px] -md:w-full
+    @apply flex items-center justify-center min-w-[210px] relative py-4 cursor-pointer text-color-gray after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-full  after:transition-all after:bg-transparent transition-all -lg:text-sm -lg:min-w-[175px] -md:w-full -min:text-xs -min:min-w-0 -min:py-3
 }
 
 .way-tab svg {
-    @apply mr-2
+    @apply mr-2 
 }
 
 .way-tab svg,
@@ -650,7 +650,7 @@ footer {
 }
 
 .map-popup {
-    @apply absolute right-[16.2vw] py-12 pl-12 pr-6 bg-white rounded-[20px] z-[9999999999] w-11/12 max-w-[360px] transition-all top-32 opacity-0 invisible -sm:right-auto -sm:left-1/2  -sm:-translate-x-1/2 -sm:fixed
+    @apply absolute right-[16.2vw] py-12 pl-12 pr-6 bg-white rounded-[20px] z-[9999999999] w-11/12 max-w-[360px] transition-all top-32 opacity-0 invisible -sm:right-auto -sm:left-1/2  -sm:-translate-x-1/2 -sm:fixed -sm:pl-6 -sm:pr-3
 }
 
 .map-popup.active {
@@ -903,9 +903,9 @@ select.dropdown {
 }
 
 .video-shadow {
+    @apply rounded-4xl;
     background: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 99.34%);
 }
-
 
 .leaflet-control-attribution.leaflet-control {
     display: none !important;
@@ -968,6 +968,12 @@ select.dropdown {
 
 .news-link:hover svg path {
     @apply fill-color-blue-dark
+}
+
+.news-link:hover svg {
+    -webkit-transform: translateX(10px);
+        -ms-transform: translateX(10px);
+            transform: translateX(10px);
 }
 
 .news-page__label {
@@ -1038,6 +1044,12 @@ select.dropdown {
 
 .bg-news-link:hover svg path {
     @apply fill-color-orange-dark
+}
+
+.bg-news-link:hover svg {
+    -webkit-transform: translateX(8px);
+        -ms-transform: translateX(8px);
+            transform: translateX(8px);
 }
 
 .breadcrumbs {
@@ -1121,7 +1133,8 @@ select.dropdown {
 }
 
 .similar-news-item {
-    @apply flex relative before:block before:pb-[100%] rounded-[20px] overflow-hidden
+    border-radius: 20px !important;
+    @apply flex relative before:block before:pb-[100%] overflow-hidden
 }
 
 .similar-news-item::before {
@@ -1135,11 +1148,14 @@ select.dropdown {
 }
 
 .similar-news-item img {
-    @apply absolute top-0 left-0 w-full h-full object-cover object-center transition-all rounded-[20px]
+    border-radius: 20px !important;
+    @apply absolute top-0 left-0 w-full h-full object-cover object-center transition-all
 }
 
 .similar-news-item:hover img {
-    @apply scale-110
+    -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+            transform: scale(1.1);
 }
 
 .similar-news-item__content {
@@ -1228,29 +1244,45 @@ select.dropdown {
     @apply mb-0
 }
 
-.table-wrapper {
-    @apply bg-white py-4 px-8 rounded-[20px] -md:overflow-auto -sm:py-2 -sm:px-4
+/* .table-wrapper {
+    -md:overflow-auto
+    @apply bg-white py-4 px-8 rounded-[20px]  -sm:py-2 -sm:px-4
+} */
+
+.table-container {
+    overflow-x: auto;
+    padding-bottom: 16px;
+    scrollbar-color: blue;
+    scrollbar-width: 10px;
+    
 }
 
-
-.table-wrapper::-webkit-scrollbar,
+.table-container::-webkit-scrollbar,
 .pure-table-wrapper::-webkit-scrollbar {
+    -webkit-appearance: none;
     @apply w-[2px] h-[2px] 
 }
 
-.table-wrapper::-webkit-scrollbar-track,
+.table-container::-webkit-scrollbar-track,
 .pure-table-wrapper::-webkit-scrollbar-track {
-    @apply bg-[#DCE4EB]
+    background: #DCE4EB;
 }
 
-.table-wrapper::-webkit-scrollbar-thumb,
+.table-container::-webkit-scrollbar-thumb,
 .pure-table-wrapper::-webkit-scrollbar-thumb {
-    @apply bg-color-blue
+    background: #0F90D1;
 }
 
 
 .table {
-    @apply text-color-dark -md:min-w-[778px]
+    @apply text-color-dark -md:min-w-[778px] relative my-4 mx-8  -sm:my-2 -sm:mx-4
+}
+
+.table::before {
+    content: '';
+    width: calc(100% + 64px);
+    height: calc(100% + 32px);
+    @apply absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-[20px] bg-white -z-1
 }
 
 .table th {
@@ -1287,12 +1319,23 @@ select.dropdown {
 }
 
 .office__social-link svg {
-    @apply w-[14px] -mb-[23px] h-8 -sm:h-6 -sm:-mb-[17px]
+    -webkit-transform: translate(0px,0px);
+       -ms-transform: translate(0px,0px);
+           transform: translate(0px,0px);
+    @apply w-[14px]  
 }
+/* h-8 -sm:h-6  */
+/* -mb-[23px]
+-sm:-mb-[17px] */
 
 .office__social-link::before {
     content: "\2B22";
-    @apply text-[43px] leading-[1em] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-1
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    @apply text-[43px] leading-[1em] absolute -z-1
 }
 
 .props__item {
@@ -1304,16 +1347,33 @@ select.dropdown {
 }
 
 .c-socials__link {
-    @apply relative w-12 h-12 leading-[48px] flex items-center justify-center -sm:w-8 -sm:h-8 -sm:leading-[32px]  transition-all align-middle
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    @apply relative w-12 h-12 -sm:w-8 -sm:h-8  transition-all 
 }
 
 .c-socials__link::before {
     content: "\2B22";
-    @apply text-[64px] leading-[1em] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-1 -sm:text-[48px]
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    @apply text-[64px] absolute -z-1 -sm:text-[48px]
 }
 
 .c-socials__link svg {
-    @apply h-12 -mb-[37px] -sm:h-8 -sm:-mb-[25px]
+    -webkit-transform: translate(0px,0px);
+       -ms-transform: translate(0px,0px);
+           transform: translate(0px,0px);
+    /* @apply h-12  -sm:h-8  */
 }
 
 .contacts-backlog {
@@ -1410,10 +1470,6 @@ input.check:focus + label {
     @apply flex items-center mx-8 -sm:mx-2
 }
 
-.pagination-list__item {
-
-}
-
 .pagination-list__link {
     @apply w-[50px] min-w-[50px] h-[50px] rounded-[50%] text-color-dark flex text-center items-center justify-center transition-all text-sm leading-[1.5em] hover:bg-color-200 font-bold active:text-color-gray -sm:w-[41px] -sm:min-w-[41px] -sm:h-[41px] -sm:text-xs -sm:leading-[1.5em]
 }
@@ -1435,7 +1491,7 @@ input.check:focus + label {
 }
 
 .pure-table-wrapper {
-    @apply w-full relative rounded-[20px] overflow-hidden -md:overflow-x-auto
+    @apply w-full relative rounded-[20px] overflow-hidden -md:overflow-x-auto -sm:pb-4
 }
 
 .pure-table {
@@ -1459,9 +1515,161 @@ input.check:focus + label {
     @apply bg-[#F1F6F9]
 }
 
+.pure-table tbody tr:last-child td:first-child {
+    @apply rounded-bl-[20px]
+}
+
+.pure-table tbody tr:last-child td:last-child {
+    @apply rounded-br-[20px]
+}
+
 .m-full-container.container {
     @apply -sm:w-full -sm:p-0 -sm:pl-4
 }
+
+.package-item {
+    @apply bg-[#222538] border rounded-[20px] px-8 pt-[72px] pb-12 relative
+}
+
+.package-item__head {
+    @apply absolute top-0 left-8 py-2 px-6 min-w-[220px] text-white font-bold rounded-[10px] -translate-y-1/2
+}
+
+.package-item:first-child .package-item__head {
+    box-shadow: 0px 10px 20px rgba(66, 199, 156, 0.4);
+}
+
+.package-item:nth-child(2) .package-item__head {
+    box-shadow: 0px 10px 20px rgba(15, 144, 209, 0.4);
+}
+
+.package-item:nth-child(3) .package-item__head {
+    box-shadow: 0px 10px 20px rgba(255, 74, 53, 0.4);
+}
+
+.package-item__head-subtitle {
+    @apply text-xs leading-[1.417em]
+}
+
+.package-item__head-title {
+    @apply text-[2rem] leading-[1.094em]
+}
+
+.package-item__content {
+    @apply text-white
+}
+
+.package-item__content-title {
+    @apply text-base font-bold mb-4
+}
+
+.package-item__list {
+    @apply text-base
+}
+
+.package-item__list li {
+    @apply pl-6 relative
+}
+
+.package-item__list li::before {
+    content: '\00B7';
+    @apply absolute top-0 left-2
+}
+
+.course-item-hero {
+    @apply relative rounded-[30px] overflow-hidden
+}
+
+.course-item-hero__media {
+    @apply bg-cover bg-no-repeat bg-center relative z-0 pt-5 pb-[68px]
+}
+
+.course-item-hero__media::before {
+    content: '';
+    background: linear-gradient(90deg, rgba(27, 28, 38, 0.95) 0%, rgba(27, 28, 38, 0.6) 50%, rgba(27, 28, 38, 0.1) 100%);
+    @apply w-full h-full absolute top-0 left-0 -z-1;
+}
+
+.inner-container {
+    @apply w-[82.96875%] mx-auto
+}
+
+.course-item-hero__media .breadcrumbs__link,
+.course-item-hero__media .breadcrumbs__item:last-child .breadcrumbs__link {
+    @apply text-white
+}
+
+.course-item-hero__media  .breadcrumbs__item:not(:last-child):after {
+    @apply ml-3
+}
+
+.course-item-hero__media .breadcrumbs__item:not(:last-child) {
+    @apply mr-3
+}
+
+.btn-white {
+    @apply bg-white text-color-dark transition-all py-6 px-8 rounded-[50px] block w-max text-sm font-bold uppercase
+}
+
+.course-item-hero__label {
+    @apply py-6 px-[50px] absolute top-0 right-0 flex items-center text-center text-white text-lg leading-[1.222em] rounded-bl-[30px]
+}
+
+.course-item-hero__label img,
+.course-item-hero__label svg {
+    @apply mr-2
+}
+
+.course-item-hero__footer {
+    @apply py-8
+}
+
+.course-item-hero__list {
+    @apply grid grid-cols-4 gap-8 text-white
+}
+
+.course-item-hero__list li {
+    @apply flex text-sm 
+}
+
+.course-item-hero__list li img,
+.course-item-hero__list li svg {
+    @apply mr-4
+}
+
+.course-item-hero__list li:not(:last-child) {
+    @apply border-r border-r-white
+}
+
+
+.course-item-hero__list-title {
+    @apply font-bold text-lg leading-[1.222em]
+}
+
+.will-learn-list {
+    @apply grid grid-cols-3 gap-x-16 gap-y-8
+}
+
+.will-learn-list li {
+    @apply flex text-color-dark text-base
+}
+
+.will-learn-list li > svg,
+.will-learn-list li > img {
+    @apply mr-[10px] w-6 min-w-[24px]
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 @media (max-width: 1024px) {
     .news-list {
@@ -1499,6 +1707,11 @@ input.check:focus + label {
 
     .contacts-map-section .container {
         @apply w-full p-0
+    }
+
+    .table::before {
+        width: calc(100% + 32px);
+        height: calc(100% + 16px);
     }
 
     .dropdown > span:before,

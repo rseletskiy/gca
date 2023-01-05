@@ -126,7 +126,7 @@
     <!-- mobile menu end -->
 
     <main>
-       <section class="pt-16 pb-24 relative overflow-hidden">
+       <section class="pt-16 pb-[92px] relative overflow-hidden">
 
         <div class="absolute top-[72px] left-[22px] -z-1 way-bcube-anime">
             <img src="./assets/news-page-cube-1.webp" class="w-[92px]"  draggable="false" alt="Cube">
@@ -154,7 +154,7 @@
                     Наши курсы
                 </h1>
 
-                <div class="grid grid-cols-3 gap-8 mb-[93px]">
+                <div class="grid grid-cols-3 gap-8">
                     <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
                         <div class="program-card hover:border-color-yellow">
                             <div class="program-card__img">
@@ -332,9 +332,11 @@
                                 <strong class="program-card__pretitle">
                                     Курс
                                 </strong>
-                                <h6 class="program-card__title text-color-green">
-                                    Финансовая грамотность
-                                </h6>
+                                <a href="./courses-item_green.html">
+                                    <h6 class="program-card__title text-color-green">
+                                        Финансовая грамотность
+                                    </h6>
+                                </a>
                                 <p class="program-card__text">
                                     Изучение финансовой грамотности. Планирование расходов и учет прибыли. Оценка
                                     показателей эффективности бизнеса.
@@ -795,12 +797,99 @@
                         </div>
                     </div>
                 </div>
+            </div>
+       </section>
 
+       <section class="relative pt-16 pb-[94px] z-0 bg-cover bg-no-repeat bg-center before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-color-dark before:opacity-90 before:-z-1" style="background-image: url('./assets/courses-bg.webp');">
+            <div class="container">
+                <h2 class="title-2 white uppercase text-center mb-[66px]">
+                    Пакетные предложения
+                </h2>
+
+                <ul class="grid grid-cols-3 gap-8">
+                    <li class="package-item border-color-green">
+                        <div class="package-item__head bg-color-green">
+                            <h6 class="package-item__head-subtitle">
+                                Пакет
+                            </h6>
+                            <h5 class="package-item__head-title">
+                                Базовый
+                            </h5>
+                        </div>
+                        <div class="package-item__content">
+                            <h6 class="package-item__content-title">
+                                При покупке онлайн-курса стоимостью 80,000 руб. ты бонусом получаешь:
+                            </h6>
+                            <ul class="package-item__list">
+                                <li>
+                                    клубную карту, предоставляющую скидку 10% на все ежемесячные клубные мероприятия QB- Event с билетом 10,000 руб.
+                                </li>
+                                <li>
+                                    подписку на закрытый телеграмм-канал стоимостью 1,000 руб.
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="package-item border-color-blue">
+                        <div class="package-item__head bg-color-blue">
+                            <h6 class="package-item__head-subtitle">
+                                Пакет
+                            </h6>
+                            <h5 class="package-item__head-title">
+                                Бизнес
+                            </h5>
+                        </div>
+                        <div class="package-item__content">
+                            <h6 class="package-item__content-title">
+                                При покупке от 2 до 5 онлайн-курсов стоимостью 80,000 руб. каждый, ты бонусом получаешь:
+                            </h6>
+                            <ul class="package-item__list">
+                                <li>
+                                    опции пакета <strong class="text-color-green">Базовый</strong>;
+                                </li>
+                                <li>
+                                    билет на одно ежемесячное клубное мероприятие QB-Event стоимостью 10,000 руб.
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="package-item border-color-red">
+                        <div class="package-item__head bg-color-red">
+                            <h6 class="package-item__head-subtitle">
+                                Пакет
+                            </h6>
+                            <h5 class="package-item__head-title">
+                                Премиум
+                            </h5>
+                        </div>
+                        <div class="package-item__content">
+                            <h6 class="package-item__content-title">
+                                При покупке 6 онлайн-курсов стоимостью 80,000 руб. каждый, ты бонусом получаешь:
+                            </h6>
+                            <ul class="package-item__list">
+                                <li>
+                                    опции пакетов <strong class="text-color-green">Базовый</strong> и <strong class="text-color-blue">Бизнес</strong>;
+                                </li>
+                                <li>
+                                    уникальный авторский трехдневный выездной тренинг стоимостью 50,000 руб;
+                                </li>
+                                <li>
+                                    персональный часовой тренинг стоимостью 30,000 руб.
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+       </section>
+
+       <section class="py-16">
+            <div class="container">
                 <div class="need-help">
                     <h3 class="title-2 uppercase leading-[1em] mb-2" data-aos="fade-up" data-aos-duration="500" data-aos-delay="200">
                         Есть вопросы <br/>или нужна помощь?
                     </h3>
-                    <p class="text-lg leading-[1.667em] text-color-dark mb-8" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
+                    <p class="text-lg leading-[1.667em] text-color-dark mb-2" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
                         Напишите нам и мы свяжемся с вами для консультации
                     </p>
                     <div class="flex" data-aos="fade-up" data-aos-duration="500" data-aos-delay="350" >

@@ -33,8 +33,8 @@ module.exports = {
         "color-orange-dark": "#EA7C16",
         "color-green": "#42C79C",
         "color-green-dark": "#13A475",
-        "color-yellow": "#EDE409",
-        "color-yellow-dark": "#D6CD00",
+        "color-yellow": "#FAC406",
+        "color-yellow-dark": "#FAC406",
         "color-gold": "#DCA606",
       },
       textColor: {
@@ -48,7 +48,7 @@ module.exports = {
         "color-orange-dark": "#EA7C16",
         "color-green": "#42C79C",
         "color-green-dark": "#13A475",
-        "color-yellow": "#EDE409",
+        "color-yellow": "#FAC406",
       },
       fill: {
         "color-100": "#F1F9FF",
@@ -65,8 +65,8 @@ module.exports = {
         "color-orange-dark": "#EA7C16",
         "color-green": "#42C79C",
         "color-green-dark": "#13A475",
-        "color-yellow": "#EDE409",
-        "color-yellow-dark": "#D6CD00",
+        "color-yellow": "#FAC406",
+        "color-yellow-dark": "#FAC406",
         "color-gold": "#DCA606",
       },
       borderColor: {
@@ -80,7 +80,7 @@ module.exports = {
         "color-red-dark": "#DB2711",
         "color-orange": "#FFA336",
         "color-green": "#42C79C",
-        "color-yellow": "#EDE409",
+        "color-yellow": "#FAC406",
         "color-gold": "#DCA606",
       },
       fontSize: {
@@ -113,6 +113,7 @@ module.exports = {
         "-lg": { max: "1024px" },
         "-md": { max: "768px" },
         "-sm": { max: "576px" },
+        "-min": {max: "374px"},
         "3xl": { min: "1700px" },
       },
     },
