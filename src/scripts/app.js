@@ -2,6 +2,8 @@ import Swiper, { EffectFade, Autoplay, Pagination, Navigation, Mousewheel, Scrol
 import anime from "animejs/lib/anime.es";
 import AOS from 'aos';
 import 'aos/dist/aos.css'; 
+import Accordion from 'accordion-js';
+import 'accordion-js/dist/accordion.min.css';
 
 Swiper.use([Navigation, Pagination, Autoplay, EffectFade, Mousewheel, Scrollbar]);
 
@@ -1121,5 +1123,62 @@ try {
     })
   })
 } catch(e) {
+  console.log(e);
+}
+
+try {
+  const courseVideo = document.getElementById('course-video');
+  const courseVideoPlay = document.getElementById('course-video-play');
+
+  courseVideoPlay.addEventListener('click', function(e) {
+    e.preventDefault();
+    courseVideoPlay.classList.add('opacity-0');
+    courseVideoPlay.classList.add('pointer-events-none');
+    courseVideo.setAttribute('controls', true)
+    courseVideo.play()
+  })
+
+} catch(e) {
+  console.log(e);
+}
+
+
+try {
+  new Accordion('.accordion-container', {
+    openOnInit: [0]
+  });
+} catch(e) {
+  console.log(e);
+}
+
+try {
+  const reviewMockSwiper = new Swiper('.reviewMockSwiper', {
+    slidesPerView: 1,
+    allowTouchMove: false,
+  });
+
+  const reviewsSwiper = new Swiper('.reviews-swiper', {
+    direction: 'vertical',
+    slidesPerView: 3,
+    spaceBetween: 16,
+    centeredSlides: true,
+    initialSlide: 1,
+    navigation: {
+      nextEl: ".review-swiper-next",
+      prevEl: ".review-swiper-prev",
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    on: {
+      slideChange: function (e) {
+        reviewMockSwiper.slideTo(e.activeIndex, 500)
+      }
+    }
+  });
+
+  
+} catch (e) {
   console.log(e);
 }
