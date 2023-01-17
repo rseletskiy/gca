@@ -1384,7 +1384,7 @@ svg.polygon path {
     -webkit-transform: translate(-50%, -50%);
         -ms-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
-    @apply absolute 
+    @apply absolute
 }
 
 .c-socials__link svg.polygon {
@@ -1398,6 +1398,10 @@ svg.polygon path {
 
 .contacts-backlog {
     @apply w-[42.1875%] h-[100vh] fixed top-0 right-0 bg-color-dark -z-1
+}
+
+.form-field {
+    @apply relative
 }
 
 .form-field:not(:last-child) {
@@ -1978,6 +1982,161 @@ input.check:focus + label {
     @apply mb-0
 }
 
+.modal-backdrop {
+    @apply w-full h-full fixed top-0 left-0 bg-[#0F1017] z-50 bg-opacity-80 invisible opacity-0 transition-all
+}
+
+.modal-backdrop.active {
+    @apply visible opacity-100
+}
+
+.modal-dialog {
+    @apply fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[90%] max-w-[720px] bg-white z-50 rounded-4xl overflow-hidden transition-all opacity-0 invisible
+}
+
+.modal-dialog.active {
+    @apply visible opacity-100
+}
+
+.modal-video-play-btn {
+    @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transition-all w-14 h-14 rounded-full bg-color-blue flex items-center justify-center hover:bg-white
+}
+
+.modal-video-play-btn svg path {
+    @apply transition-all
+}
+
+.modal-video-play-btn:hover svg path {
+    @apply fill-color-blue
+}
+
+.modal-video-play-btn.hide {
+    @apply opacity-0 invisible
+}
+
+.modal-dialog-body {
+    @apply pt-8 pb-12 px-8
+}
+
+.modal-speaker-title {
+    @apply text-2xl leading-[1.083em] font-bold text-color-dark mb-1
+}
+
+.modal-speaker-subtitle {
+    @apply text-xs font-bold text-color-dark mb-4
+}
+
+.modal-tabs {
+    @apply flex mb-6
+}
+
+.modal-tabs__button {
+    @apply text-sm text-color-gray font-bold py-2 px-6 min-w-[160px] border-b-2 border-b-color-200 transition-all
+}
+
+.modal-tabs__button.active {
+    @apply text-color-dark border-b-color-dark
+}
+
+.scrollbar {
+    @apply overflow-auto pr-[14px]
+}
+
+.scrollbar::-webkit-scrollbar {
+    width: 2px;
+}
+
+.scrollbar::-webkit-scrollbar-track {
+    @apply bg-[#DCE4EB]
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+    @apply bg-color-blue
+}
+
+.modal-tab-description {
+    @apply h-[180px] text-color-dark
+}
+
+.modal-tab-description .text-block {
+    @apply mb-0 text-sm
+}
+
+.modal-tab-skills {
+
+}
+
+.modal-tab-skills ul {
+    @apply grid grid-cols-3 gap-x-8 gap-y-6
+}
+
+.modal-tab-skills ul li {
+    @apply flex
+}
+
+.modal-tab-skills ul li svg {
+    @apply min-w-[20px] mr-2 mt-0.5
+}
+
+.modal-tab-skills ul li p {
+    @apply text-sm text-color-dark
+}
+
+
+.modal-dialog-close {
+    @apply absolute top-4 right-4 z-50
+}
+
+.modal-dialog-content {
+    @apply py-12 px-8
+}
+
+.speaker-inner-pagination .swiper-pagination-bullet {
+    margin: 0 12px !important;
+    @apply w-[5px] h-[5px] opacity-100 bg-[#B9C8D3] 
+}
+
+.speaker-inner-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    @apply bg-color-blue
+}
+
+.speaker-inner-btn {
+    @apply absolute top-1/2 -translate-y-1/2 z-50 w-12 h-12 flex items-center justify-center transition-all rounded-full hover:bg-color-200
+}
+
+.speaker-inner-btn svg path {
+    @apply  transition-all
+}
+
+.speaker-inner-btn:hover svg path {
+    @apply stroke-color-blue
+}
+
+.speaker-inner-next {
+    @apply right-4
+}
+
+.speaker-inner-prev {
+    @apply left-4
+}
+
+.modal-dialog .form-field input,
+.modal-dialog .form-field textarea {
+    @apply bg-transparent text-color-dark border-input-gray
+}
+
+.modal-dialog .form-field input:hover, .modal-dialog .form-field input:focus,
+.modal-dialog .form-field textarea:hover, .modal-dialog .form-field textarea:focus {
+    @apply border-color-blue
+}
+
+.input-counter {
+    @apply absolute text-base text-color-gray right-6 top-4
+}
+
+.form-field-wrapper {
+    @apply grid grid-cols-2 gap-x-2
+}
 
 
 
@@ -1997,6 +2156,48 @@ input.check:focus + label {
 
 
 
+
+
+
+
+.jq-stars {
+    display: inline-block;
+  }
+  
+  .jq-rating-label {
+    font-size: 22px;
+    display: inline-block;
+    position: relative;
+    vertical-align: top;
+    font-family: helvetica, arial, verdana;
+  }
+  
+  .jq-star {
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    cursor: pointer;
+  }
+  
+  .jq-star-svg {
+    padding-left: 3px;
+    width: 100%;
+    height: 100% ;
+  }
+  
+  .jq-star:hover .fs-star-svg path {
+  }
+  
+  .jq-star-svg path {
+    /* stroke: #000; */
+    stroke-linejoin: round;
+  }
+  
+  /* un-used */
+  .jq-shadow {
+    -webkit-filter: drop-shadow( -2px -2px 2px #888 );
+    filter: drop-shadow( -2px -2px 2px #888 );
+  }
 
 @media (max-width: 1024px) {
     .news-list {
@@ -2030,6 +2231,11 @@ input.check:focus + label {
 @media (max-width: 576px) {
     .hero-swiper-pagination {
         left: 16px !important;
+    }
+
+    .c-socials__link svg:not(.polygon),
+    .office__social-link svg:not(.polygon) {
+        width: 10px !important;
     }
 
     .contacts-map-section .container {

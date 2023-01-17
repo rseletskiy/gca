@@ -69,6 +69,25 @@ module.exports = {
         "color-yellow-dark": "#FAC406",
         "color-gold": "#DCA606",
       },
+      stroke: {
+        "color-100": "#F1F9FF",
+        "color-200": "#DDEBF6",
+        "color-300": "#8A949F",
+        "color-400": "#313552",
+        "color-gray": "#8A949F",
+        "color-dark": "#313552",
+        "color-blue": "#0F90D1",
+        "color-blue-dark": "#006DA8",
+        "color-red": "#FF4A35",
+        "color-red-dark": "#D11D07",
+        "color-orange": "#FFA336",
+        "color-orange-dark": "#EA7C16",
+        "color-green": "#42C79C",
+        "color-green-dark": "#13A475",
+        "color-yellow": "#FAC406",
+        "color-yellow-dark": "#FAC406",
+        "color-gold": "#DCA606",
+      },
       borderColor: {
         "color-dark": "#313552",
         "color-200": "#DDEBF6",
@@ -82,6 +101,7 @@ module.exports = {
         "color-green": "#42C79C",
         "color-yellow": "#FAC406",
         "color-gold": "#DCA606",
+        "input-gray": "#B9C8D3"
       },
       fontSize: {
         "3.5xl": "2rem",

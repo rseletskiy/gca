@@ -1142,6 +1142,121 @@ try {
   console.log(e);
 }
 
+try {
+  const modalPlayBtns = $('.js-modal-video-play');
+
+  modalPlayBtns.each(function () {
+    $(this).click(function(e) {
+      e.preventDefault()
+      $(this).addClass('hide')
+      const video = $(this).prev();
+      video.attr('controls',true);
+      video.trigger('play', true)
+    })
+  })
+} catch(e) {
+  console.error(e)
+}
+
+try {
+  $(".js-rating").starRating({
+    starSize: 32,
+    useFullStars: true,
+    emptyColor: 'white',
+    hoverColor: '#FFA336',
+    activeColor: '#FFA336',
+    ratedColor: '#FFA336',
+    ratedColors: ['#FFA336', '#FFA336', '#FFA336', '#FFA336', '#FFA336'],
+    disableAfterRate: false,
+    strokeWidth: 15,
+    strokeColor: '#FFA336',
+    callback: function(currentRating, $el){
+        // make a server call here
+    }
+});
+} catch (e) {
+  console.log(e);
+}
+
+try {
+  const speakerInnerSwiper = new Swiper(".speaker-inner-swiper", {
+    pagination: {
+      el: ".speaker-inner-pagination",
+    },
+    navigation: {
+      nextEl: ".speaker-inner-next",
+      prevEl: ".speaker-inner-prev",
+    },
+    on: {
+      slideChange: function() {
+        const modalPlayBtns = $('.js-modal-video-play');
+
+        modalPlayBtns.each(function () {
+            $(this).removeClass('hide')
+            const video = $(this).prev();
+            video.attr('controls',false);
+            video.trigger('pause', true)
+          })
+      }
+    }
+  });
+} catch (e) {
+  console.log(e);
+}
+
+try {
+  const speakerInfoSwiper = new Swiper(".speaker-info-swiper", {
+    autoHeight: true,
+    allowTouchMove: false,
+  });
+
+  const speakerTabs = document.querySelectorAll(".js-speaker-info-tab");
+
+  speakerTabs.forEach((tab, index) => {
+    tab.addEventListener("click", function (e) {
+      e.preventDefault();
+
+      for (let i = 0; i < speakerTabs.length; i++) {
+        speakerTabs[i].classList.remove("active");
+      }
+
+      speakerInfoSwiper.slideTo(index, 500);
+      this.classList.add("active");
+    });
+  });
+} catch (e) {
+  console.log(e);
+}
+
+try {
+  const speakerBtns = document.querySelectorAll('.speaker-play');
+  const speakerModal = document.querySelector('.js-speakers-dialog');
+  const speakerModalBackdrop = document.querySelector('.modal-backdrop');
+  const closeSpeakerModalBtn = speakerModal.querySelector('.modal-dialog-close')
+  speakerBtns.forEach(btn => {
+    btn.addEventListener('click', function(e) {
+      e.preventDefault()
+      speakerModal.classList.add('active');
+      speakerModalBackdrop.classList.add('active');
+    })
+  })
+
+  closeSpeakerModalBtn.addEventListener('click', function(e) {
+    e.preventDefault()
+    speakerModal.classList.remove('active')
+    speakerModalBackdrop.classList.remove('active')
+  })
+
+  speakerModalBackdrop.addEventListener('click', function(e) {
+    e.preventDefault()
+    speakerModal.classList.remove('active')
+    speakerModalBackdrop.classList.remove('active')
+  })
+  
+} catch (e) {
+  console.log(e);
+}
+
 
 try {
   new Accordion('.accordion-container', {
@@ -1181,4 +1296,80 @@ try {
   
 } catch (e) {
   console.log(e);
+}
+
+
+try {
+  const fields = document.querySelectorAll('.js-char-limit');
+
+  fields.forEach(field => {
+    const max = field.querySelector('.js-input-max');
+    const current = field.querySelector('.js-input-current');
+    current.innerHTML = 0;
+    max.innerHTML = field.querySelector('[maxlength]').getAttribute('maxlength')
+
+    field.addEventListener('keyup', function(e) {
+      current.innerHTML = e.target.value.length
+    })
+  })
+} catch(e) {
+  console.error(e);
+}
+
+try {
+  const reviewOpenModalBtns = document.querySelectorAll('.js-open-review');
+  const reviewModal = document.querySelector('.js-leave-review-modal');
+  const reviewBackdrop = document.querySelector('.modal-backdrop')
+  const reviewCloseModalBtn = reviewModal.querySelector('.modal-dialog-close');
+
+  reviewOpenModalBtns.forEach(button => {
+    button.addEventListener('click', function(e) {
+      e.preventDefault();
+      reviewModal.classList.add('active');
+      reviewBackdrop.classList.add('active')
+    })
+  })
+
+  reviewCloseModalBtn.addEventListener('click', function(e) {
+    e.preventDefault();
+    reviewModal.classList.remove('active');
+    reviewBackdrop.classList.remove('active')
+  })
+
+  reviewBackdrop.addEventListener('click', function(e) {
+    e.preventDefault();
+    reviewModal.classList.remove('active');
+    reviewBackdrop.classList.remove('active')
+  })
+} catch (e) {
+  console.log(e);
+}
+
+try {
+  const consultationOpenModalBtns = document.querySelectorAll('.js-open-consultation');
+  const consultationModal = document.querySelector('.js-consultation-modal');
+  const consultationBackdrop = document.querySelector('.modal-backdrop')
+  const consultationCloseModalBtn = consultationModal.querySelector('.modal-dialog-close');
+
+  consultationOpenModalBtns.forEach(button => {
+    button.addEventListener('click', function(e) {
+      e.preventDefault();
+      consultationModal.classList.add('active');
+      consultationBackdrop.classList.add('active')
+    })
+  })
+
+  consultationCloseModalBtn.addEventListener('click', function(e) {
+    e.preventDefault();
+    consultationModal.classList.remove('active');
+    consultationBackdrop.classList.remove('active')
+  })
+
+  consultationBackdrop.addEventListener('click', function(e) {
+    e.preventDefault();
+    consultationModal.classList.remove('active');
+    consultationBackdrop.classList.remove('active')
+  })
+} catch (e) {
+  console.error(e);
 }

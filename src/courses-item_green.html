@@ -592,7 +592,7 @@
                         Отзывы учеников о курсе
                     </h3>
 
-                    <a href="#" class="btn bg-color-green hover:bg-color-green-dark" style="box-shadow: 0px 16px 24px rgba(66, 199, 156, 0.4);">
+                    <a href="#" class="btn bg-color-green hover:bg-color-green-dark js-open-review" style="box-shadow: 0px 16px 24px rgba(66, 199, 156, 0.4);">
                         Написать отзыв
                     </a>
                 </div>
@@ -999,7 +999,7 @@
 
                 <div class="flex flex-col items-center text-center">
                     <h4 class="uppercase font-bold text-xl leading-[1em] text-color-dark mb-4">Остались вопросы или нужна консультация?</h4>
-                    <a href="#" class="btn bg-color-blue hover:bg-color-blue-dark" style="box-shadow: 0px 16px 24px rgba(15, 144, 209, 0.4);">
+                    <a href="#" class="btn bg-color-blue hover:bg-color-blue-dark js-open-consultation" style="box-shadow: 0px 16px 24px rgba(15, 144, 209, 0.4);">
                         Получить консультацию
                     </a>
                 </div>
@@ -1190,7 +1190,260 @@
         </div>
     </footer>
 
+    <div class="modal-backdrop"></div>
+    <!-- SPEAKER MODAL START -->
+    <div class="modal-dialog js-speakers-dialog">
+        <button class="modal-dialog-close">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18 6.00007L6 18M18 17.9999L6 6" stroke="#313552" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </button>
+        <div class="swiper speaker-inner-swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="relative before:block before:pb-[41.66666666666667%]">
+                        <img src="./assets/speaker-1.webp" class="w-full h-full absolute top-0 left-0 object-cover object-top after:block" draggable="false" alt="Image">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="relative before:block before:pb-[41.66666666666667%]">
+                        <video playsinline poster="./assets/speaker-1.webp" class="w-full h-full absolute top-0 left-0 object-cover object-top after:block">
+                            <source src="./assets/slider-video.mp4"  type="video/mp4" >
+                        </video>
+                        <button type="button" class="modal-video-play-btn js-modal-video-play" aria-label="Play video">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M21 10.268C22.3333 11.0378 22.3333 12.9623 21 13.7321L9 20.6603C7.66667 21.4301 6 20.4678 6 18.9282L6 5.07183C6 3.53223 7.66667 2.56998 9 3.33978L21 10.268Z" fill="white"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="relative before:block before:pb-[41.66666666666667%]">
+                        <video playsinline poster="./assets/speaker-1.webp" class="w-full h-full absolute top-0 left-0 object-cover object-top after:block">
+                            <source src="./assets/slider-video.mp4"  type="video/mp4" >
+                        </video>
+                        <button type="button" class="modal-video-play-btn js-modal-video-play" aria-label="Play video">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M21 10.268C22.3333 11.0378 22.3333 12.9623 21 13.7321L9 20.6603C7.66667 21.4301 6 20.4678 6 18.9282L6 5.07183C6 3.53223 7.66667 2.56998 9 3.33978L21 10.268Z" fill="white"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="relative before:block before:pb-[41.66666666666667%]">
+                        <video playsinline id="course-video" poster="./assets/speaker-1.webp" class="w-full h-full absolute top-0 left-0 object-cover object-top after:block">
+                            <source src="./assets/slider-video.mp4"  type="video/mp4" >
+                        </video>
+                        <button type="button" class="modal-video-play-btn js-modal-video-play" aria-label="Play video">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M21 10.268C22.3333 11.0378 22.3333 12.9623 21 13.7321L9 20.6603C7.66667 21.4301 6 20.4678 6 18.9282L6 5.07183C6 3.53223 7.66667 2.56998 9 3.33978L21 10.268Z" fill="white"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination speaker-inner-pagination"></div>
+            <button type="button" aria-label="Next slide" class="speaker-inner-btn speaker-inner-next">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M13.332 22.6667L18.6654 16L13.332 9.33335" stroke="#B9C8D3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+            <button type="button" aria-label="Prev slide" class="speaker-inner-btn speaker-inner-prev">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M18.668 9.33331L13.3346 16L18.668 22.6666" stroke="#B9C8D3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+        </div>
+        
+
+        <div class="modal-dialog-body">
+            <h5 class="modal-speaker-title">Афанасьев Прохор</h5>
+            <h6 class="modal-speaker-subtitle">Финансовый директор Oriflame</h6>
+            <ul class="modal-tabs">
+                <li>
+                    <button type="button" class="modal-tabs__button js-speaker-info-tab active">
+                        Описание
+                    </button>
+                </li>
+                <li>
+                    <button type="button" class="modal-tabs__button js-speaker-info-tab">
+                        Навыки
+                    </button>
+                </li>
+            </ul>
+
+            <div class="swiper speaker-info-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="modal-tab-description scrollbar">
+                            <div class="text-block">
+                                <p>
+                                    Quis imperdiet massa tincidunt nunc pulvinar sapien. Duis tristique sollicitudin nibh sit amet commodo. Ultrices
+                                    sagittis orci a scelerisque purus. Netus et malesuada fames ac turpis egestas integer eget aliquet. Ut consequat
+                                    semper viverra nam libero justo laoreet sit.
+                                    In hendrerit gravida rutrum quisque non tellus orci ac. Hac habitasse platea dictumst quisque sagittis purus
+                                    sit. Scelerisque viverra mauris in aliquam sem fringilla ut. Mi quis hendrerit dolor magna eget est lorem.
+                                    Praesent elementum facilisis leo vel fringilla. Cursus in hac habitasse platea dictumst quisque sagittis purus
+                                    sit. Quisque sagittis purus sit amet. Diam donec adipiscing tristique risus nec feugiat in fermentum. Nisl purus
+                                    in mollis nunc sed. Senectus et netus et malesuada fames ac turpis egestas sed. Nunc scelerisque viverra mauris
+                                    in aliquam sem fringilla.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="modal-tab-skills">
+                            <ul>
+                                <li>
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M10.0013 18.3333C14.6037 18.3333 18.3346 14.6023 18.3346 9.99996C18.3346 5.39759 14.6037 1.66663 10.0013 1.66663C5.39893 1.66663 1.66797 5.39759 1.66797 9.99996C1.66797 14.6023 5.39893 18.3333 10.0013 18.3333ZM13.828 7.8837C14.0399 7.61123 13.9908 7.21856 13.7184 7.00664C13.4459 6.79472 13.0532 6.84381 12.8413 7.11627L9.50213 11.4095C9.42787 11.505 9.28821 11.5173 9.19831 11.4364L7.08608 9.53543C6.82951 9.30452 6.43433 9.32531 6.20341 9.58188C5.9725 9.83845 5.9933 10.2336 6.24987 10.4645L8.3621 12.3656C8.99138 12.9319 9.96905 12.8452 10.4888 12.1769L13.828 7.8837Z" fill="#0F90D1"/>
+                                    </svg>
+                                    <p>
+                                        Mattis enim ut tellus elementum sagittis vitae et
+                                    </p>
+                                </li>
+                                <li>
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M10.0013 18.3333C14.6037 18.3333 18.3346 14.6023 18.3346 9.99996C18.3346 5.39759 14.6037 1.66663 10.0013 1.66663C5.39893 1.66663 1.66797 5.39759 1.66797 9.99996C1.66797 14.6023 5.39893 18.3333 10.0013 18.3333ZM13.828 7.8837C14.0399 7.61123 13.9908 7.21856 13.7184 7.00664C13.4459 6.79472 13.0532 6.84381 12.8413 7.11627L9.50213 11.4095C9.42787 11.505 9.28821 11.5173 9.19831 11.4364L7.08608 9.53543C6.82951 9.30452 6.43433 9.32531 6.20341 9.58188C5.9725 9.83845 5.9933 10.2336 6.24987 10.4645L8.3621 12.3656C8.99138 12.9319 9.96905 12.8452 10.4888 12.1769L13.828 7.8837Z" fill="#0F90D1"/>
+                                    </svg>
+                                    <p>
+                                        Mattis aliquam faucibus purus faucibus interdum
+                                    </p>
+                                </li>
+                                <li>
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M10.0013 18.3333C14.6037 18.3333 18.3346 14.6023 18.3346 9.99996C18.3346 5.39759 14.6037 1.66663 10.0013 1.66663C5.39893 1.66663 1.66797 5.39759 1.66797 9.99996C1.66797 14.6023 5.39893 18.3333 10.0013 18.3333ZM13.828 7.8837C14.0399 7.61123 13.9908 7.21856 13.7184 7.00664C13.4459 6.79472 13.0532 6.84381 12.8413 7.11627L9.50213 11.4095C9.42787 11.505 9.28821 11.5173 9.19831 11.4364L7.08608 9.53543C6.82951 9.30452 6.43433 9.32531 6.20341 9.58188C5.9725 9.83845 5.9933 10.2336 6.24987 10.4645L8.3621 12.3656C8.99138 12.9319 9.96905 12.8452 10.4888 12.1769L13.828 7.8837Z" fill="#0F90D1"/>
+                                    </svg>
+                                    <p>
+                                        Commodo quis imperdiet massa tincidunt nunc pulvinar
+                                    </p>
+                                </li>
+                                <li>
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M10.0013 18.3333C14.6037 18.3333 18.3346 14.6023 18.3346 9.99996C18.3346 5.39759 14.6037 1.66663 10.0013 1.66663C5.39893 1.66663 1.66797 5.39759 1.66797 9.99996C1.66797 14.6023 5.39893 18.3333 10.0013 18.3333ZM13.828 7.8837C14.0399 7.61123 13.9908 7.21856 13.7184 7.00664C13.4459 6.79472 13.0532 6.84381 12.8413 7.11627L9.50213 11.4095C9.42787 11.505 9.28821 11.5173 9.19831 11.4364L7.08608 9.53543C6.82951 9.30452 6.43433 9.32531 6.20341 9.58188C5.9725 9.83845 5.9933 10.2336 6.24987 10.4645L8.3621 12.3656C8.99138 12.9319 9.96905 12.8452 10.4888 12.1769L13.828 7.8837Z" fill="#0F90D1"/>
+                                    </svg>
+                                    <p>
+                                        Fermentum posuere urna nec tincidunt praesent
+                                    </p>
+                                </li>
+                                <li>
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M10.0013 18.3333C14.6037 18.3333 18.3346 14.6023 18.3346 9.99996C18.3346 5.39759 14.6037 1.66663 10.0013 1.66663C5.39893 1.66663 1.66797 5.39759 1.66797 9.99996C1.66797 14.6023 5.39893 18.3333 10.0013 18.3333ZM13.828 7.8837C14.0399 7.61123 13.9908 7.21856 13.7184 7.00664C13.4459 6.79472 13.0532 6.84381 12.8413 7.11627L9.50213 11.4095C9.42787 11.505 9.28821 11.5173 9.19831 11.4364L7.08608 9.53543C6.82951 9.30452 6.43433 9.32531 6.20341 9.58188C5.9725 9.83845 5.9933 10.2336 6.24987 10.4645L8.3621 12.3656C8.99138 12.9319 9.96905 12.8452 10.4888 12.1769L13.828 7.8837Z" fill="#0F90D1"/>
+                                    </svg>
+                                    <p>
+                                        Venenatis a condimentum vitae sapien pellentesque habitant
+                                    </p>
+                                </li>
+                                <li>
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M10.0013 18.3333C14.6037 18.3333 18.3346 14.6023 18.3346 9.99996C18.3346 5.39759 14.6037 1.66663 10.0013 1.66663C5.39893 1.66663 1.66797 5.39759 1.66797 9.99996C1.66797 14.6023 5.39893 18.3333 10.0013 18.3333ZM13.828 7.8837C14.0399 7.61123 13.9908 7.21856 13.7184 7.00664C13.4459 6.79472 13.0532 6.84381 12.8413 7.11627L9.50213 11.4095C9.42787 11.505 9.28821 11.5173 9.19831 11.4364L7.08608 9.53543C6.82951 9.30452 6.43433 9.32531 6.20341 9.58188C5.9725 9.83845 5.9933 10.2336 6.24987 10.4645L8.3621 12.3656C8.99138 12.9319 9.96905 12.8452 10.4888 12.1769L13.828 7.8837Z" fill="#0F90D1"/>
+                                    </svg>
+                                    <p>
+                                        Imperdiet nulla malesuada pellentesque elit eget gravida
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+
+            
+        </div>
+    </div>
+    <!-- SPEAKER MODAL END -->
+
+
+    <!-- REVIEW MODAL START -->
+    <div class="modal-dialog js-leave-review-modal">
+        <button class="modal-dialog-close">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18 6.00007L6 18M18 17.9999L6 6" stroke="#313552" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </button>
+        <div class="modal-dialog-content">
+            <h4 class="title-3 text-center text-color-dark mb-4">
+                Написать отзыв
+            </h4>
+
+            <form>
+                <div class="text-center mb-[16px]">
+                    <h6 class="text-sm text-color-dark font-bold mb-1">Поставьте оценку</h6>
+                    <div class="form-star-rating js-rating"></div>
+                </div>
+                <div class="form-field">
+                    <input type="text" placeholder="Ваше имя" required>
+                </div>
+                <div class="form-field">
+                    <input type="email" placeholder="Ваше email" required>
+                </div>
+                <div class="form-field js-char-limit">
+                    <input type="text" placeholder="Заголовок: коротко опишите ваш опыт" required maxlength="70">
+                    <div class="input-counter">
+                        <span class="js-input-current"></span>/<span class="js-input-max"></span>
+                    </div>
+                </div>
+                <div class="form-field js-char-limit">
+                    <textarea placeholder="Подробный текст отзыва" required  maxlength="450"></textarea>
+                    <div class="input-counter">
+                        <span class="js-input-current"></span>/<span class="js-input-max"></span>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn mx-auto block bg-color-blue hover:bg-color-blue-dark" style="box-shadow: 0px 16px 24px rgba(15, 144, 209, 0.4);">
+                    Отправить
+                </button>
+            </form>
+        </div>  
+    </div>
+    <!-- REVIEW MODAL END -->
+
+    <!-- CONSULTATION MODAL START -->
+    <div class="modal-dialog js-consultation-modal">
+        <button class="modal-dialog-close">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18 6.00007L6 18M18 17.9999L6 6" stroke="#313552" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </button>
+        <div class="modal-dialog-content">
+            <h4 class="title-3 text-center text-color-dark mb-2">
+                Получить консультацию
+            </h4>
+            <p class="text-center text-sm text-color-dark max-w-[405px] mx-auto mb-8">
+                Оставьте свой вопрос и/или контакты и мы связжимся с вами для консультации
+            </p>
+
+            <form>
+                <div class="form-field">
+                    <input type="text" placeholder="Ваше имя" required>
+                </div>
+                <div class="form-field-wrapper">
+                    <div class="form-field">
+                        <input type="email" placeholder="Ваше email" required>
+                    </div>
+                    <div class="form-field">
+                        <input type="tel" placeholder="Ваш телефон" required>
+                    </div>
+                </div>
+                <div class="form-field js-char-limit">
+                    <textarea placeholder="Подробный текст отзыва" required  maxlength="450"></textarea>
+                    <div class="input-counter">
+                        <span class="js-input-current"></span>/<span class="js-input-max"></span>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn mx-auto block bg-color-blue hover:bg-color-blue-dark" style="box-shadow: 0px 16px 24px rgba(15, 144, 209, 0.4);">
+                    Отправить
+                </button>
+            </form>
+        </div>  
+    </div>
+    <!-- CONSULTATION MODAL END -->
+
+
     <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+    <script src="./scripts/star-rating.min.js"></script>
     <script src="./scripts/lang-select.js" type="module"></script>
     <script src="./scripts/app.js" type="module"></script>
 </body>
