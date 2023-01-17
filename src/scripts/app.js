@@ -1371,5 +1371,34 @@ try {
     consultationBackdrop.classList.remove('active')
   })
 } catch (e) {
+  console.log(e);
+}
+
+try {
+  let init = false;
+
+  function swiperCard() {
+    if (window.innerWidth <= 768) {
+      if (!init) {
+        init = true;
+        swiper = new Swiper(".courses-mobile-swiper", {
+          direction: "horizontal",
+          slidesPerView: "auto",
+          centeredSlides: true,
+          scrollbar: {
+            el: ".js-edu-slider-scrollbar",
+            hide: false,
+            draggable: true,
+          },
+        });
+      }
+    } else if (init) {
+      swiper.destroy();
+      init = false;
+    }
+  }
+  swiperCard();
+  window.addEventListener("resize", swiperCard);
+} catch (e) {
   console.error(e);
 }

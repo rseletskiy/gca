@@ -1552,11 +1552,11 @@ input.check:focus + label {
 }
 
 .package-item {
-    @apply bg-[#222538] border rounded-[20px] px-8 pt-[72px] pb-12 relative
+    @apply bg-[#222538] border rounded-[20px] px-8 pt-[72px] pb-12 relative -sm:pt-12 -sm:px-4 -sm:pb-6
 }
 
 .package-item__head {
-    @apply absolute top-0 left-8 py-2 px-6 min-w-[220px] text-white font-bold rounded-[10px] -translate-y-1/2
+    @apply absolute top-0 left-8 py-2 px-6 min-w-[220px] text-white font-bold rounded-[10px] -translate-y-1/2 -sm:min-w-[170px] -sm:left-4
 }
 
 .package-item:first-child .package-item__head {
@@ -1572,11 +1572,11 @@ input.check:focus + label {
 }
 
 .package-item__head-subtitle {
-    @apply text-xs leading-[1.417em]
+    @apply text-xs leading-[1.417em] -sm:text-[8px] -sm:leading-[1.375em]
 }
 
 .package-item__head-title {
-    @apply text-[2rem] leading-[1.094em]
+    @apply text-[2rem] leading-[1.094em] -sm:text-2xl -sm:leading-[1.083em]
 }
 
 .package-item__content {
@@ -1584,11 +1584,11 @@ input.check:focus + label {
 }
 
 .package-item__content-title {
-    @apply text-base font-bold mb-4
+    @apply text-base font-bold mb-4 -sm:text-sm -sm:max-w-[272px]
 }
 
 .package-item__list {
-    @apply text-base
+    @apply text-base -sm:text-sm
 }
 
 .package-item__list li {
@@ -2140,9 +2140,9 @@ input.check:focus + label {
 
 
 
-
-
-
+.courses-mobile-swiper .js-edu-slider-scrollbar {
+    @apply bg-color-200 hidden mt-6
+}
 
 
 
@@ -2225,6 +2225,10 @@ input.check:focus + label {
     .contacts-controls::before {
         content: '';
         @apply w-[120vw] h-full bg-color-dark absolute top-0 left-1/2 -translate-x-1/2 -z-1
+    }
+
+    .courses-mobile-swiper .js-edu-slider-scrollbar {
+        @apply block
     }
 }
 
