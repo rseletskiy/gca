@@ -507,6 +507,24 @@ const eduSlider = new Swiper(".js-edu-slider", {
   },
 });
 
+try {
+  const locomotivesSwiper = new Swiper('.locomotives-swiper', {
+    slidesPerView: 4,
+    spaceBetween: 32,
+    mousewheel: {
+      forceToAxis: true
+    },
+    keyboard: true,
+    scrollbar: {
+      el: ".js-edu-slider-scrollbar ",
+      hide: false,
+      draggable: true,
+    },
+  })
+} catch(e) {
+  console.log(e);
+}
+
 const reviewSlider = new Swiper('.js-review-swiper', {
   slidesPerView: 1,
   effect: "fade",
@@ -1286,6 +1304,34 @@ try {
       el: '.swiper-pagination',
       clickable: true,
     },
+    breakpoints: {
+      320: {
+        direction: 'horizontal',
+        slidesPerView: 1,
+        centeredSlides: false,
+        initialSlide: 0,
+        spaceBetween: 0,
+      },
+      576: {
+        direction: 'horizontal',
+        slidesPerView: 1,
+        centeredSlides: false,
+        initialSlide: 0,
+        spaceBetween: 0,
+
+      },
+      769: {
+        direction: 'vertical',
+        slidesPerView: 3,
+        centeredSlides: true,
+        initialSlide: 1,
+        spaceBetween: 16,
+      },
+      1024: {
+        direction: 'vertical',
+
+      }
+    },
     on: {
       slideChange: function (e) {
         reviewMockSwiper.slideTo(e.activeIndex, 500)
@@ -1384,6 +1430,7 @@ try {
         swiper = new Swiper(".courses-mobile-swiper", {
           direction: "horizontal",
           slidesPerView: "auto",
+          spaceBetween: 16,
           centeredSlides: true,
           scrollbar: {
             el: ".js-edu-slider-scrollbar",

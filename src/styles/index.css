@@ -205,7 +205,7 @@ body::before {
 }
 
 .program-card {
-    @apply w-full rounded-[20px] overflow-hidden border border-transparent transition-all
+    @apply w-full rounded-[20px] overflow-hidden border border-transparent transition-all bg-white
 }
 
 .program-card__img {
@@ -1605,7 +1605,15 @@ input.check:focus + label {
 }
 
 .course-item-hero__media {
-    @apply bg-cover bg-no-repeat bg-center relative z-0 pt-5 pb-[68px]
+    @apply bg-cover bg-no-repeat bg-center relative z-0 pt-5 pb-[68px] -lg:pt-24 -md:pt-16 -md:pb-12
+}
+
+.course-item-hero__media .btn-white {
+    @apply -sm:py-5 -sm:px-6 -sm:text-[10px] -sm:leading-[1.4em]
+}
+
+.course-item-hero__media .title-1 {
+    @apply -md:text-[30px] -md:mb-2
 }
 
 .course-item-hero__media::before {
@@ -1615,7 +1623,7 @@ input.check:focus + label {
 }
 
 .inner-container {
-    @apply w-[82.96875%] mx-auto
+    @apply w-[82.96875%] mx-auto -lg:w-[90%] -sm:w-full -sm:px-4
 }
 
 .course-item-hero__media .breadcrumbs__link,
@@ -1631,12 +1639,16 @@ input.check:focus + label {
     @apply mr-3
 }
 
+.course-item-hero__media .breadcrumbs {
+    @apply -lg:hidden
+}
+
 .btn-white {
     @apply bg-white text-color-dark transition-all py-6 px-8 rounded-[50px] block w-max text-sm font-bold uppercase
 }
 
 .course-item-hero__label {
-    @apply py-6 px-[50px] absolute top-0 right-0 flex items-center text-center text-white text-lg leading-[1.222em] rounded-bl-[30px]
+    @apply py-6 px-[50px] absolute top-0 right-0 flex items-center text-center text-white text-lg leading-[1.222em] rounded-bl-[30px] -md:text-sm -md:px-4 -md:py-3
 }
 
 .course-item-hero__label img,
@@ -1645,54 +1657,58 @@ input.check:focus + label {
 }
 
 .course-item-hero__footer {
-    @apply py-8
+    @apply py-8 -sm:py-6
 }
 
 .course-item-hero__list {
-    @apply grid grid-cols-4 gap-8 text-white
+    @apply grid grid-cols-4 gap-8 text-white -lg:gap-4 -md:grid-cols-1 -sm:gap-4
 }
 
 .course-item-hero__list li {
-    @apply flex text-sm 
+    @apply flex text-sm -md:border-l-white -md:border-l -md:pl-4
+}
+
+.course-item-hero__list li span {
+    @apply -sm:text-xs -sm:leading-[1.417em]
 }
 
 .course-item-hero__list li img,
 .course-item-hero__list li svg {
-    @apply mr-4
+    @apply mr-4 -lg:mr-3 -sm:mr-4
 }
 
 .course-item-hero__list li:not(:last-child) {
-    @apply border-r border-r-white
+    @apply border-r border-r-white -md:border-r-transparent
 }
 
-
 .course-item-hero__list-title {
-    @apply font-bold text-lg leading-[1.222em]
+    @apply font-bold text-lg leading-[1.222em] -lg:text-base -sm:text-sm -sm:leading-[1.214em]
 }
 
 .will-learn-list {
-    @apply grid grid-cols-3 gap-x-16 gap-y-8
+    @apply grid grid-cols-3 gap-x-16 gap-y-8 -md:grid-cols-2 -sm:grid-cols-1   -sm:gap-y-3  
 }
 
 .will-learn-list li {
-    @apply flex text-color-dark text-base
+    @apply flex text-color-dark text-base -sm:text-sm
 }
 
 .will-learn-list li > svg,
 .will-learn-list li > img {
-    @apply mr-[10px] w-6 min-w-[24px]
+    @apply mr-[10px] w-6 min-w-[24px] h-6 -sm:w-5 -sm:h-5 -sm:min-w-[20px] -sm:mr-1
 }
 
 .program-head {
     width: calc(100% - 515px - 32px);
+    @apply -xl:w-full -xl:max-w-[600px]
 }
 
 .program-head > p {
-    @apply text-lg leading-[1.667em] text-color-dark mb-4 max-w-[635px]
+    @apply text-lg leading-[1.667em] text-color-dark mb-4 max-w-[635px] -md:text-sm -md:max-w-[400px]
 }
 
 .program-head ul {
-    @apply grid grid-cols-3 gap-2
+    @apply grid grid-cols-3 gap-2 -md:grid-cols-1
 }
 
 .program-head ul li {
@@ -1700,20 +1716,23 @@ input.check:focus + label {
 }
 
 .program-head ul li strong {
-    @apply p-[10px] min-w-[72px] text-center text-white rounded-[50px] text-lg leading-[1.222em] mr-2
+    @apply p-[10px] min-w-[72px] text-center text-white rounded-[50px] text-lg leading-[1.222em] mr-2 -sm:text-sm -sm:py-2 -sm:min-w-[64px]
 }
 
 .program-head ul li span {
-    @apply text-color-dark text-sm font-bold
+    @apply text-color-dark text-sm font-bold text-left  
 }
 
+.program-head ul li span br {
+    @apply -md:hidden
+}
 
 .ac .ac-trigger:after {
     content: '';
 }
 
 .open-icon {
-    @apply w-10 h-10 rounded-full relative transition-all
+    @apply w-10 h-10 min-w-[40px] rounded-full relative transition-all -sm:w-[22px] -sm:h-[22px] -sm:min-w-[22px]
 }
 
 .open-icon::after,
@@ -1723,11 +1742,11 @@ input.check:focus + label {
 }
 
 .open-icon::after {
-    @apply w-0.5 h-6
+    @apply w-0.5 h-6 -sm:h-[14px]
 }
 
 .open-icon::before {
-    @apply h-0.5 w-6
+    @apply h-0.5 w-6 -sm:w-[14px]
 }
 
 .ac.is-active .open-icon::after {
@@ -1771,7 +1790,7 @@ input.check:focus + label {
 }
 
 .ac .ac-trigger {
-    @apply font-montserrat flex items-center justify-between text-color-dark text-xl leading-[1.1em] px-0 py-8 outline-none
+    @apply font-montserrat flex items-center justify-between text-color-dark text-xl leading-[1.1em] px-0 py-8 outline-none -sm:py-4 -sm:items-start
 }
 
 .accordion-container .ac .ac-trigger h6,
@@ -1779,12 +1798,16 @@ input.check:focus + label {
     @apply text-color-dark
 }
 
+.accordion-container .ac .ac-trigger h6 {
+    @apply -sm:text-lg -sm:leading-[1.111em]
+}
+
 .ac:first-child {
     @apply border-t border-t-color-dark
 }
 
 .accordion-container .ac .ac-trigger strong  {
-    @apply min-w-[77px] mr-8
+    @apply min-w-[77px] mr-8 -lg:min-w-[unset] -sm:text-lg -sm:leading-[1.111em] -sm:mr-2
 }
 
 .ac-panel {
@@ -1792,7 +1815,7 @@ input.check:focus + label {
 }
 
 .ac-panel .text-block {
-    @apply mb-0 pb-[31px]
+    @apply mb-0 pb-[31px] -sm:text-sm
 }
 
 .speaker {
@@ -1804,7 +1827,11 @@ input.check:focus + label {
 }
 
 .speaker-play {
-    @apply absolute top-4 right-4 rounded-full w-[56px] h-[56px] flex items-center justify-center
+    @apply absolute top-4 right-4 rounded-full w-[56px] h-[56px] flex items-center justify-center -sm:w-10 -sm:h-10
+}
+
+.speaker-play svg {
+    @apply w-6 h-6 -sm:w-4 -sm:h-4
 }
 
 .speaker-media img {
@@ -1812,15 +1839,15 @@ input.check:focus + label {
 }
 
 .speaker-body {
-    @apply  pt-6 px-6 pb-8
+    @apply  pt-6 px-6 pb-8 -sm:pt-4 -sm:pb-6 -sm:px-4
 }
 
 .speaker__name {
-    @apply text-2xl leading-[1.083em] font-bold text-color-dark mb-1
+    @apply text-2xl leading-[1.083em] font-bold text-color-dark mb-1 -sm:text-lg -sm:leading-[1.111em]
 }
 
 .speaker__role {
-    @apply font-bold text-color-dark text-xs mb-4 block
+    @apply font-bold text-color-dark text-xs mb-4 block -sm:text-[10px] -sm:leading-[1.3em] -sm:mb-2
 }
 
 .speaker__descr {
@@ -1829,11 +1856,11 @@ input.check:focus + label {
 
 .review-user-preview {
     height: 112px !important;
-    @apply flex items-center justify-between py-6 px-8 rounded-[20px] transition-all
+    @apply flex items-center justify-between py-6 px-8 rounded-[20px] transition-all -sm:py-2 -sm:px-2
 }
 
 .review-user-preview-img {
-    @apply w-16 h-16 min-w-[64px] rounded-full overflow-hidden border border-[#B9C8D3] mr-8
+    @apply w-16 h-16 min-w-[64px] rounded-full overflow-hidden border border-[#B9C8D3] mr-8 -sm:w-12 -sm:h-12 -sm:min-w-[48px] -sm:mr-2
 }
 
 .review-user-preview-img img {
@@ -1841,15 +1868,19 @@ input.check:focus + label {
 }
 
 .review-user-preview__title {
-    @apply text-lg leading-[1.222em] text-color-dark font-semibold mb-0.5
+    @apply text-lg leading-[1.222em] text-color-dark font-semibold mb-0.5 -sm:text-sm -sm:leading-[1.214em]
 }
 
 .review-user-preview__location {
-    @apply text-sm leading-[1.214em] text-color-dark
+    @apply text-sm leading-[1.214em] text-color-dark -sm:text-[10px] -sm:leading-[1.2em] -sm:block
 }
 
 .review-user-preview__play {
-    @apply w-[52px] h-[52px] rounded-full flex items-center justify-center border border-[#B9C8D3] transition-all
+    @apply w-[52px] h-[52px] rounded-full flex items-center justify-center border border-[#B9C8D3] transition-all -sm:w-[36px] -sm:h-[36px]
+}
+
+.review-user-preview__play svg {
+    @apply w-5 h-5 -sm:w-3 -sm:h-3
 }
 
 .review-user-preview__play svg path {
@@ -1920,11 +1951,11 @@ input.check:focus + label {
 }
 
 .swiper-pagination.reviews-swiper-pag {
-    @apply right-auto left-[5px]
+    @apply right-auto left-[5px] -md:flex -md:justify-center -md:-bottom-8 -sm:-bottom-6
 }
 
 .swiper-pagination.reviews-swiper-pag .swiper-pagination-bullet {
-    @apply w-[5px] h-[5px] my-6 block relative
+    @apply w-[5px] h-[5px] my-6 block relative -md:my-0 -md:mx-4
 }
 
 .swiper-pagination.reviews-swiper-pag .swiper-pagination-bullet::after {
@@ -1942,7 +1973,7 @@ input.check:focus + label {
 
 
 .review-swiper-btn {
-    @apply w-12 h-12 flex items-center justify-center absolute left-[53.5%] -translate-x-1/2
+    @apply w-12 h-12 flex items-center justify-center absolute left-[53.5%] -translate-x-1/2 -md:hidden
 }
 
 .review-swiper-prev {
@@ -1955,18 +1986,19 @@ input.check:focus + label {
 
 .review-preview-wrapper {
     width: calc(100% - 515px - 141px);
+    @apply -lg:w-full
 }
 
 .review-mock {
-    @apply pt-[81px]
+    @apply pt-[81px] -lg:pt-8 -sm:pt-0
 }
 
 .review-mock__title {
-    @apply font-bold text-color-dark text-2xl leading-[1.417em] mb-2
+    @apply font-bold text-color-dark text-2xl leading-[1.417em] mb-2 -sm:text-lg -sm:text-center -sm:mb-1
 }
 
 .review-mock__rating {
-    @apply flex items-center mb-12
+    @apply flex items-center mb-12 -sm:justify-center -sm:mb-4
 }
 
 .review-mock__rating svg:not(:last-child) {
@@ -1974,7 +2006,7 @@ input.check:focus + label {
 }
 
 .review-mock .text-block {
-    @apply text-lg leading-[1.667em]
+    @apply text-lg leading-[1.667em] -sm:text-sm -sm:h-[138px] -sm:overflow-y-auto -sm:pr-2
 }
 
 
@@ -1991,7 +2023,7 @@ input.check:focus + label {
 }
 
 .modal-dialog {
-    @apply fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[90%] max-w-[720px] bg-white z-50 rounded-4xl overflow-hidden transition-all opacity-0 invisible
+    @apply fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[90%] max-w-[720px] bg-white z-50 rounded-4xl overflow-hidden transition-all opacity-0 invisible -sm:max-w-[320px]
 }
 
 .modal-dialog.active {
@@ -1999,7 +2031,11 @@ input.check:focus + label {
 }
 
 .modal-video-play-btn {
-    @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transition-all w-14 h-14 rounded-full bg-color-blue flex items-center justify-center hover:bg-white
+    @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transition-all w-14 h-14 rounded-full bg-color-blue flex items-center justify-center hover:bg-white -sm:w-10 -sm:h-10
+}
+
+.modal-video-play-btn svg {
+    @apply w-6 h-6 -sm:w-4 -sm:h-4
 }
 
 .modal-video-play-btn svg path {
@@ -2015,23 +2051,27 @@ input.check:focus + label {
 }
 
 .modal-dialog-body {
-    @apply pt-8 pb-12 px-8
+    @apply pt-8 pb-12 px-8 -sm:pt-4 -sm:pb-6 -sm:px-4
 }
 
 .modal-speaker-title {
-    @apply text-2xl leading-[1.083em] font-bold text-color-dark mb-1
+    @apply text-2xl leading-[1.083em] font-bold text-color-dark mb-1 -sm:text-lg -sm:leading-[1.111em]
 }
 
 .modal-speaker-subtitle {
-    @apply text-xs font-bold text-color-dark mb-4
+    @apply text-xs font-bold text-color-dark mb-4 -sm:text-[10px] -sm:leading-[1.3em]
 }
 
 .modal-tabs {
     @apply flex mb-6
 }
 
+.modal-tabs li {
+    @apply -sm:w-[50%]
+}
+
 .modal-tabs__button {
-    @apply text-sm text-color-gray font-bold py-2 px-6 min-w-[160px] border-b-2 border-b-color-200 transition-all
+    @apply text-sm text-color-gray font-bold py-2 px-6 min-w-[160px] border-b-2 border-b-color-200 transition-all -sm:min-w-0 -sm:w-full
 }
 
 .modal-tabs__button.active {
@@ -2067,7 +2107,7 @@ input.check:focus + label {
 }
 
 .modal-tab-skills ul {
-    @apply grid grid-cols-3 gap-x-8 gap-y-6
+    @apply grid grid-cols-3 gap-x-8 gap-y-6 -sm:grid-cols-1 -sm:gap-3
 }
 
 .modal-tab-skills ul li {
@@ -2087,13 +2127,17 @@ input.check:focus + label {
     @apply absolute top-4 right-4 z-50
 }
 
+.modal-dialog-close svg {
+    @apply w-6 h-6 -sm:w-4 -sm:h-4
+}
+
 .modal-dialog-content {
-    @apply py-12 px-8
+    @apply py-12 px-8 -sm:py-8 -sm:px-4
 }
 
 .speaker-inner-pagination .swiper-pagination-bullet {
     margin: 0 12px !important;
-    @apply w-[5px] h-[5px] opacity-100 bg-[#B9C8D3] 
+    @apply w-[5px] h-[5px] opacity-100 bg-[#B9C8D3] -sm:hidden
 }
 
 .speaker-inner-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
@@ -2131,28 +2175,127 @@ input.check:focus + label {
 }
 
 .input-counter {
-    @apply absolute text-base text-color-gray right-6 top-4
+    @apply absolute text-base text-color-gray right-6 top-4 -sm:top-3 -sm:right-4 -sm:text-sm
 }
 
 .form-field-wrapper {
-    @apply grid grid-cols-2 gap-x-2
+    @apply grid grid-cols-2 gap-x-2 -sm:grid-cols-1 -sm:mb-2
 }
-
-
 
 .courses-mobile-swiper .js-edu-slider-scrollbar {
     @apply bg-color-200 hidden mt-6
 }
 
+.breadcrumbs.course-item-tablet-breadcrumbs {
+    @apply mb-4 hidden -lg:flex
+}
 
+.about-hero-section {
+    @apply relative pt-12 pb-[733px] z-0 
+}
 
+.about-hero-section::before {
+    content: '';
+    background: linear-gradient(360deg, #24273C 0%, #525782 100%);
+    height: calc(100% + 112px);
+    @apply absolute bottom-0 left-0 right-0 w-full -z-1
+}
 
+.header__dark .link {
+    @apply text-white
+}
 
+.about-hero-title {
+    background: linear-gradient(180deg, #A9E2FF 0%, #0F90D1 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    @apply text-[6rem] leading-[1em] font-bold uppercase mb-2
+}
 
+.about-hero-section__b-shadow {
+    background: linear-gradient(360deg, #24273C 0%, rgba(36, 39, 60, 0.99) 14.58%, rgba(36, 39, 60, 0.96) 29.17%, rgba(36, 39, 60, 0.85) 43.75%, rgba(38, 42, 66, 0.7) 57.81%, rgba(41, 44, 70, 0.5) 71.88%, rgba(40, 44, 66, 0.19) 85.94%, rgba(51, 54, 81, 0) 100%);
+    @apply absolute bottom-0 left-0 right-0 w-full h-[530px] z-1 pointer-events-none
+}
 
+.mission-gall-item {
+    @apply w-[18.553vw] min-w-[300px] max-h-[440px] relative before:block before:pb-[146.6666666666667%] flex rounded-4xl overflow-hidden mr-2
+}
 
+.mission-gall-item img {
+    @apply object-cover object-center w-full
+}
 
+.edu-item {
+    @apply flex justify-between py-12
+}
 
+.edu-item:not(:last-child) {
+    @apply border-b border-b-color-200
+}
+
+.edu-item__head {
+    @apply w-[406px] font-bold flex 
+}
+
+.edu-item__head strong {
+    @apply text-[2.5rem] leading-[1.1em] min-w-[78px] mr-8
+}
+
+.edu-item__head h5 {
+    @apply text-2xl leading-[1.083em] text-color-dark
+}
+
+.edu-item__content {
+    width: calc(100% - 406px - 32px);
+}
+
+.edu-item__content li {
+    @apply flex
+}
+
+.edu-item__content li:not(:last-child) {
+    @apply mb-4
+}
+
+.edu-item__content li::before {
+    content: '';
+    @apply w-2 h-2 min-w-[8px] rounded-full my-2 ml-2 mr-3
+}
+
+.speaker__level {
+    @apply text-xs leading-[1.333em] text-color-gray block mb-4
+}
+
+.locomotives-swiper .speaker__role {
+    @apply mb-1
+}
+
+.speaker__location {
+    @apply text-xs leading-[1.333em] text-color-dark block mt-4
+}
+
+.locomotives-swiper .js-edu-slider-pagination.swiper-pagination-progressbar, 
+.locomotives-swiper .js-edu-slider-scrollbar.swiper-scrollbar {
+    @apply bg-color-200
+}
+
+.future-item {
+    @apply flex flex-col items-center text-center text-color-dark
+}
+
+.future-item strong {
+    @apply text-[4.5rem] leading-[1.194em] mb-2
+}
+
+.future-item__divider {
+    @apply h-0.5 w-[80px] rounded-sm mb-4
+}
+
+.future-item span {
+    @apply max-w-[250px]
+}
 
 
 
@@ -2199,6 +2342,7 @@ input.check:focus + label {
     filter: drop-shadow( -2px -2px 2px #888 );
   }
 
+
 @media (max-width: 1024px) {
     .news-list {
         grid-template-areas: none;
@@ -2230,11 +2374,19 @@ input.check:focus + label {
     .courses-mobile-swiper .js-edu-slider-scrollbar {
         @apply block
     }
+
+    .review-user-preview:not(.swiper-slide-active) {
+        @apply opacity-0
+    }
 }
 
 @media (max-width: 576px) {
     .hero-swiper-pagination {
         left: 16px !important;
+    }
+
+    .review-user-preview {
+        height: unset !important;
     }
 
     .c-socials__link svg:not(.polygon),
