@@ -520,6 +520,21 @@ try {
       hide: false,
       draggable: true,
     },
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+      },
+      480: {
+        slidesPerView: 1,
+      },
+  
+      640: {
+        slidesPerView: 2,
+      },
+      1025: {
+        slidesPerView: 4,
+      },
+    },
   })
 } catch(e) {
   console.log(e);
@@ -1196,8 +1211,9 @@ try {
   console.log(e);
 }
 
+let speakerInnerSwiper
 try {
-  const speakerInnerSwiper = new Swiper(".speaker-inner-swiper", {
+  speakerInnerSwiper = new Swiper(".speaker-inner-swiper", {
     pagination: {
       el: ".speaker-inner-pagination",
     },
@@ -1224,7 +1240,7 @@ try {
 
 try {
   const speakerInfoSwiper = new Swiper(".speaker-info-swiper", {
-    autoHeight: true,
+    autoHeight: false,
     allowTouchMove: false,
   });
 
@@ -1247,7 +1263,8 @@ try {
 }
 
 try {
-  const speakerBtns = document.querySelectorAll('.speaker-play');
+  const speakerBtns = document.querySelectorAll('.speaker-open');
+  const speakerPlayBtns = document.querySelectorAll('.speaker-play');
   const speakerModal = document.querySelector('.js-speakers-dialog');
   const speakerModalBackdrop = document.querySelector('.modal-backdrop');
   const closeSpeakerModalBtn = speakerModal.querySelector('.modal-dialog-close')
@@ -1259,16 +1276,40 @@ try {
     })
   })
 
+  speakerPlayBtns.forEach(btn => {
+    btn.addEventListener('click', function(e) {
+      e.preventDefault()
+      const modalSlides = speakerModal.querySelectorAll('.speaker-inner-swiper .swiper-slide')
+      console.log(modalSlides);
+      let shouldSkip = false;
+      modalSlides.forEach((slide, index) => {
+        if (shouldSkip) {
+          return;
+        }
+
+        if (slide.querySelector('video')) {
+          speakerInnerSwiper.slideTo(index);
+          shouldSkip = true;
+          return
+        }
+      })
+      speakerModal.classList.add('active');
+      speakerModalBackdrop.classList.add('active');
+    })
+  })
+
   closeSpeakerModalBtn.addEventListener('click', function(e) {
     e.preventDefault()
     speakerModal.classList.remove('active')
     speakerModalBackdrop.classList.remove('active')
+    speakerInnerSwiper.slideTo(0)
   })
 
   speakerModalBackdrop.addEventListener('click', function(e) {
     e.preventDefault()
     speakerModal.classList.remove('active')
     speakerModalBackdrop.classList.remove('active')
+    speakerInnerSwiper.slideTo(0)
   })
   
 } catch (e) {
@@ -1277,9 +1318,7 @@ try {
 
 
 try {
-  new Accordion('.accordion-container', {
-    openOnInit: [0]
-  });
+  new Accordion('.accordion-container');
 } catch(e) {
   console.log(e);
 }
@@ -1295,7 +1334,7 @@ try {
     slidesPerView: 3,
     spaceBetween: 16,
     centeredSlides: true,
-    initialSlide: 1,
+    loop: true,
     navigation: {
       nextEl: ".review-swiper-next",
       prevEl: ".review-swiper-prev",
@@ -1324,7 +1363,7 @@ try {
         direction: 'vertical',
         slidesPerView: 3,
         centeredSlides: true,
-        initialSlide: 1,
+        initialSlide: 0,
         spaceBetween: 16,
       },
       1024: {

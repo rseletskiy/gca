@@ -208,6 +208,10 @@ body::before {
     @apply w-full rounded-[20px] overflow-hidden border border-transparent transition-all bg-white
 }
 
+.recomended-list .program-card {
+    @apply border-color-200
+}
+
 .program-card__img {
     @apply w-full relative before:block before:pb-[49.385%] bg-gray-300 flex  bg-cover bg-no-repeat bg-center
 }
@@ -575,7 +579,7 @@ footer {
 }
 
 .footer-logo {
-    @apply max-w-[224px] w-full -sm:mb-6
+    @apply max-w-[285px] w-full -sm:mb-6 -sm:max-w-[214px]
 }
 
 .footer-logo img {
@@ -1404,6 +1408,11 @@ svg.polygon path {
     @apply relative
 }
 
+.form-field.js-char-limit input,
+.form-field.js-char-limit textarea {
+    @apply pr-[70px] -sm:pr-[59px]
+}
+
 .form-field:not(:last-child) {
     @apply mb-2
 }
@@ -1815,11 +1824,11 @@ input.check:focus + label {
 }
 
 .ac-panel .text-block {
-    @apply mb-0 pb-[31px] -sm:text-sm
+    @apply mb-0 pb-[31px] -sm:text-sm -sm:h-[200px]  -sm:mb-4 -sm:w-[89.73635%] -sm:mr-[unset]
 }
 
 .speaker {
-    @apply rounded-[20px] overflow-hidden bg-white
+    @apply rounded-[20px] overflow-hidden bg-white border border-color-dark transition-all
 }
 
 .speaker-media {
@@ -1843,7 +1852,7 @@ input.check:focus + label {
 }
 
 .speaker__name {
-    @apply text-2xl leading-[1.083em] font-bold text-color-dark mb-1 -sm:text-lg -sm:leading-[1.111em]
+    @apply text-2xl leading-[1.083em] font-bold text-color-dark mb-1 -sm:text-lg -sm:leading-[1.111em]  cursor-pointer
 }
 
 .speaker__role {
@@ -1955,7 +1964,7 @@ input.check:focus + label {
 }
 
 .swiper-pagination.reviews-swiper-pag .swiper-pagination-bullet {
-    @apply w-[5px] h-[5px] my-6 block relative -md:my-0 -md:mx-4
+    @apply w-[5px] h-[5px] my-6 block relative -md:my-0 -md:mx-4 -sm:w-[3px] -sm:h-[3px] -sm:mx-2
 }
 
 .swiper-pagination.reviews-swiper-pag .swiper-pagination-bullet::after {
@@ -1981,7 +1990,7 @@ input.check:focus + label {
 }
 
 .review-swiper-next {
-    @apply bottom-[-55px]
+    @apply bottom-[-25px]
 }
 
 .review-preview-wrapper {
@@ -2191,7 +2200,7 @@ input.check:focus + label {
 }
 
 .about-hero-section {
-    @apply relative pt-12 pb-[733px] z-0 
+    @apply relative pt-12 pb-[733px] z-0 -lg:pb-[554px] -md:pb-[336px] -sm:pt-8
 }
 
 .about-hero-section::before {
@@ -2211,16 +2220,16 @@ input.check:focus + label {
     -webkit-text-fill-color: transparent;
     background-clip: text;
     text-fill-color: transparent;
-    @apply text-[6rem] leading-[1em] font-bold uppercase mb-2
+    @apply text-[6rem] leading-[1em] font-bold uppercase mb-2 -lg:text-[4.5rem] -md:text-[3.5rem] -sm:text-[3rem]
 }
 
 .about-hero-section__b-shadow {
     background: linear-gradient(360deg, #24273C 0%, rgba(36, 39, 60, 0.99) 14.58%, rgba(36, 39, 60, 0.96) 29.17%, rgba(36, 39, 60, 0.85) 43.75%, rgba(38, 42, 66, 0.7) 57.81%, rgba(41, 44, 70, 0.5) 71.88%, rgba(40, 44, 66, 0.19) 85.94%, rgba(51, 54, 81, 0) 100%);
-    @apply absolute bottom-0 left-0 right-0 w-full h-[530px] z-1 pointer-events-none
+    @apply absolute bottom-0 left-0 right-0 w-full h-[530px] z-1 pointer-events-none -md:h-[250px] -sm:h-[340px] -sm:-bottom-0.5
 }
 
 .mission-gall-item {
-    @apply w-[18.553vw] min-w-[300px] max-h-[440px] relative before:block before:pb-[146.6666666666667%] flex rounded-4xl overflow-hidden mr-2
+    @apply w-[18.553vw] min-w-[300px] max-h-[440px] relative before:block before:pb-[146.6666666666667%] flex rounded-4xl overflow-hidden mr-2 -lg:min-w-[200px] -sm:w-[35.46875vw] -sm:min-w-[113px] -sm:rounded-2xl -sm:min-h-[168px] -sm:before:pb-[148.6725663716814%]
 }
 
 .mission-gall-item img {
@@ -2228,7 +2237,7 @@ input.check:focus + label {
 }
 
 .edu-item {
-    @apply flex justify-between py-12
+    @apply flex justify-between py-12 -lg:flex-col -sm:py-6
 }
 
 .edu-item:not(:last-child) {
@@ -2236,36 +2245,37 @@ input.check:focus + label {
 }
 
 .edu-item__head {
-    @apply w-[406px] font-bold flex 
+    @apply w-[406px] font-bold flex -lg:w-full -lg:items-center -lg:mb-6 -sm:flex-col -sm:items-start -sm:mb-2
 }
 
 .edu-item__head strong {
-    @apply text-[2.5rem] leading-[1.1em] min-w-[78px] mr-8
+    @apply text-[2.5rem] leading-[1.1em] min-w-[78px] mr-8 -sm:mb-2
 }
 
 .edu-item__head h5 {
-    @apply text-2xl leading-[1.083em] text-color-dark
+    @apply text-2xl leading-[1.083em] text-color-dark -sm:text-lg -sm:leading-[1.111em]
 }
 
 .edu-item__content {
     width: calc(100% - 406px - 32px);
+    @apply -lg:w-full
 }
 
 .edu-item__content li {
-    @apply flex
+    @apply flex -sm:text-sm
 }
 
 .edu-item__content li:not(:last-child) {
-    @apply mb-4
+    @apply mb-4 -sm:mb-2
 }
 
 .edu-item__content li::before {
     content: '';
-    @apply w-2 h-2 min-w-[8px] rounded-full my-2 ml-2 mr-3
+    @apply w-2 h-2 min-w-[8px] rounded-full my-2 ml-2 mr-3 -sm:my-[6px] -sm:ml-[6px] -sm:mr-[10px] -sm:w-[6px] -sm:h-[6px] -sm:min-w-[6px]
 }
 
 .speaker__level {
-    @apply text-xs leading-[1.333em] text-color-gray block mb-4
+    @apply text-xs leading-[1.333em] text-color-gray block mb-4 -sm:text-[10px] -sm:leading-[1.3em] -sm:mb-2
 }
 
 .locomotives-swiper .speaker__role {
@@ -2273,7 +2283,7 @@ input.check:focus + label {
 }
 
 .speaker__location {
-    @apply text-xs leading-[1.333em] text-color-dark block mt-4
+    @apply text-xs leading-[1.333em] text-color-dark block mt-4 -sm:mt-2
 }
 
 .locomotives-swiper .js-edu-slider-pagination.swiper-pagination-progressbar, 
@@ -2286,17 +2296,25 @@ input.check:focus + label {
 }
 
 .future-item strong {
-    @apply text-[4.5rem] leading-[1.194em] mb-2
+    @apply text-[4.5rem] leading-[1.194em] mb-2 -md:text-[3rem] -sm:text-[2rem] -sm:leading-[1.188em] -sm:mb-1
 }
 
 .future-item__divider {
-    @apply h-0.5 w-[80px] rounded-sm mb-4
+    @apply h-0.5 w-[80px] rounded-sm mb-4 -sm:mb-2
 }
 
 .future-item span {
-    @apply max-w-[250px]
+    @apply max-w-[250px] -sm:text-sm
 }
 
+.swiper.locomotives-swiper .swiper-scrollbar {
+    @apply mt-6
+}
+
+
+.course-speakers-section .js-edu-slider-scrollbar {
+    background: #1B1D2B;
+}
 
 
 
@@ -2304,43 +2322,27 @@ input.check:focus + label {
 
 
 .jq-stars {
-    display: inline-block;
-  }
-  
-  .jq-rating-label {
-    font-size: 22px;
-    display: inline-block;
-    position: relative;
-    vertical-align: top;
-    font-family: helvetica, arial, verdana;
-  }
-  
-  .jq-star {
-    width: 100px;
-    height: 100px;
-    display: inline-block;
-    cursor: pointer;
-  }
-  
-  .jq-star-svg {
-    padding-left: 3px;
-    width: 100%;
-    height: 100% ;
-  }
-  
-  .jq-star:hover .fs-star-svg path {
-  }
-  
-  .jq-star-svg path {
+    @apply inline-block
+}
+
+.jq-star {
+    @apply w-[100px] h-[100px] inline-block cursor-pointer mx-0.5
+}
+
+.jq-star-svg {
+    @apply w-full h-full pl-[3px]
+}
+
+.jq-star-svg path {
     /* stroke: #000; */
     stroke-linejoin: round;
-  }
-  
-  /* un-used */
-  .jq-shadow {
-    -webkit-filter: drop-shadow( -2px -2px 2px #888 );
-    filter: drop-shadow( -2px -2px 2px #888 );
-  }
+}
+
+/* un-used */
+.jq-shadow {
+    -webkit-filter: drop-shadow(-2px -2px 2px #888);
+    filter: drop-shadow(-2px -2px 2px #888);
+}
 
 
 @media (max-width: 1024px) {
@@ -2385,6 +2387,22 @@ input.check:focus + label {
         left: 16px !important;
     }
 
+    .scrollbar__mobile {
+        @apply overflow-auto pr-[14px]
+    }
+    
+    .scrollbar__mobile::-webkit-scrollbar {
+        width: 2px;
+    }
+    
+    .scrollbar__mobile::-webkit-scrollbar-track {
+        @apply bg-[#DCE4EB]
+    }
+    
+    .scrollbar__mobile::-webkit-scrollbar-thumb {
+        @apply bg-color-blue
+    }
+
     .review-user-preview {
         height: unset !important;
     }
@@ -2403,10 +2421,19 @@ input.check:focus + label {
         height: calc(100% + 16px);
     }
 
+    .about-main-video-svg {
+        width: 48px !important;
+    }
+
     .dropdown > span:before,
     .c-dark .dropdown:not(.regular) > span:before {
         content: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGcgY2xpcC1wYXRoPSJ1cmwoI2NsaXAwXzcyNF8xNDYyNCkiPgo8cGF0aCBkPSJNMTQuNjY2MyA4LjAwMDAxQzE0LjY2NjMgMTEuNjgxOSAxMS42ODE2IDE0LjY2NjcgNy45OTk2NyAxNC42NjY3TTE0LjY2NjMgOC4wMDAwMUMxNC42NjYzIDQuMzE4MTEgMTEuNjgxNiAxLjMzMzM0IDcuOTk5NjcgMS4zMzMzNE0xNC42NjYzIDguMDAwMDFDMTQuNjY2MyA2Ljg5NTQ0IDExLjY4MTYgNi4wMDAwMSA3Ljk5OTY3IDYuMDAwMDFDNC4zMTc3OCA2LjAwMDAxIDEuMzMzMDEgNi44OTU0NCAxLjMzMzAxIDguMDAwMDFNMTQuNjY2MyA4LjAwMDAxQzE0LjY2NjMgOS4xMDQ1OCAxMS42ODE2IDEwIDcuOTk5NjcgMTBDNC4zMTc3OCAxMCAxLjMzMzAxIDkuMTA0NTggMS4zMzMwMSA4LjAwMDAxTTcuOTk5NjcgMTQuNjY2N0M0LjMxNzc4IDE0LjY2NjcgMS4zMzMwMSAxMS42ODE5IDEuMzMzMDEgOC4wMDAwMU03Ljk5OTY3IDE0LjY2NjdDOS40NzI0MyAxNC42NjY3IDEwLjY2NjMgMTEuNjgxOSAxMC42NjYzIDguMDAwMDFDMTAuNjY2MyA0LjMxODExIDkuNDcyNDMgMS4zMzMzNCA3Ljk5OTY3IDEuMzMzMzRNNy45OTk2NyAxNC42NjY3QzYuNTI2OTEgMTQuNjY2NyA1LjMzMzAxIDExLjY4MTkgNS4zMzMwMSA4LjAwMDAxQzUuMzMzMDEgNC4zMTgxMSA2LjUyNjkxIDEuMzMzMzQgNy45OTk2NyAxLjMzMzM0TTEuMzMzMDEgOC4wMDAwMUMxLjMzMzAxIDQuMzE4MTEgNC4zMTc3OCAxLjMzMzM0IDcuOTk5NjcgMS4zMzMzNCIgc3Ryb2tlPSIjMzEzNTUyIi8+CjwvZz4KPGRlZnM+CjxjbGlwUGF0aCBpZD0iY2xpcDBfNzI0XzE0NjI0Ij4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8L2NsaXBQYXRoPgo8L2RlZnM+Cjwvc3ZnPgo=");
     }
+
+    .header.header__dark .dropdown:not(.regular) > span:before {
+        content: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGcgY2xpcC1wYXRoPSJ1cmwoI2NsaXAwXzEzNzZfMTQ0NTMpIj4KPHBhdGggZD0iTTE0LjY2NTQgOC4wMDAwMUMxNC42NjU0IDExLjY4MTkgMTEuNjgwNiAxNC42NjY3IDcuOTk4NyAxNC42NjY3TTE0LjY2NTQgOC4wMDAwMUMxNC42NjU0IDQuMzE4MTEgMTEuNjgwNiAxLjMzMzM0IDcuOTk4NyAxLjMzMzM0TTE0LjY2NTQgOC4wMDAwMUMxNC42NjU0IDYuODk1NDQgMTEuNjgwNiA2LjAwMDAxIDcuOTk4NyA2LjAwMDAxQzQuMzE2OCA2LjAwMDAxIDEuMzMyMDMgNi44OTU0NCAxLjMzMjAzIDguMDAwMDFNMTQuNjY1NCA4LjAwMDAxQzE0LjY2NTQgOS4xMDQ1OCAxMS42ODA2IDEwIDcuOTk4NyAxMEM0LjMxNjggMTAgMS4zMzIwMyA5LjEwNDU4IDEuMzMyMDMgOC4wMDAwMU03Ljk5ODcgMTQuNjY2N0M0LjMxNjggMTQuNjY2NyAxLjMzMjAzIDExLjY4MTkgMS4zMzIwMyA4LjAwMDAxTTcuOTk4NyAxNC42NjY3QzkuNDcxNDYgMTQuNjY2NyAxMC42NjU0IDExLjY4MTkgMTAuNjY1NCA4LjAwMDAxQzEwLjY2NTQgNC4zMTgxMSA5LjQ3MTQ2IDEuMzMzMzQgNy45OTg3IDEuMzMzMzRNNy45OTg3IDE0LjY2NjdDNi41MjU5NCAxNC42NjY3IDUuMzMyMDMgMTEuNjgxOSA1LjMzMjAzIDguMDAwMDFDNS4zMzIwMyA0LjMxODExIDYuNTI1OTQgMS4zMzMzNCA3Ljk5ODcgMS4zMzMzNE0xLjMzMjAzIDguMDAwMDFDMS4zMzIwMyA0LjMxODExIDQuMzE2OCAxLjMzMzM0IDcuOTk4NyAxLjMzMzM0IiBzdHJva2U9IndoaXRlIi8+CjwvZz4KPGRlZnM+CjxjbGlwUGF0aCBpZD0iY2xpcDBfMTM3Nl8xNDQ1MyI+CjxyZWN0IHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgZmlsbD0id2hpdGUiLz4KPC9jbGlwUGF0aD4KPC9kZWZzPgo8L3N2Zz4K");
+    }
+
 
     .way-tabs-list > div:nth-child(1) .way-tab::after, .way-tabs-list > div:nth-child(2) .way-tab::after {
         content: '';
