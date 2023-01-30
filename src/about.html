@@ -37,16 +37,16 @@
 </head>
 
 <body class="font-montserrat bg-color-100 relative z-0">  
-    <header class="header text-white header__dark">
+    <header class="header text-color-dark">
         <div class="w-[94%] mx-auto flex items-center justify-between">
             <div class="flex items-center">
                 <a href="./index.html" class="mr-16 -xl:mr-10 -sm:w-[134px] logo-anime">
-                    <img src="./assets/gca-logo__ligth.webp" width="212" height="64" alt="Golden Cube Academy" class="h-auto -sm:w-full">
+                    <img src="./assets/gca-logo.webp" width="212" height="64" alt="Golden Cube Academy" class="h-auto -sm:w-full">
                 </a>
                 <nav class="-lg:hidden">
                     <ul class="flex items-center">
                         <li class="nav-item">
-                            <a href="./about.html" class="link hover:text-color-orange">Об академии</a>
+                            <a href="#" class="link hover:text-color-orange">Об академии</a>
                         </li>
                         <li class="nav-item">
                             <a href="./courses.html" class="link hover:text-color-blue">Курсы</a>
@@ -61,7 +61,7 @@
                 </nav>
             </div>
             <div class="flex items-center">
-                <div class="relative mr-24 -xl:mr-9 -sm:mr-6 lang-anime flex c-dark">
+                <div class="relative mr-24 -xl:mr-9 -sm:mr-6 lang-anime flex">
                     <select class="dropdown">
                         <option value="RU" selected>Русский</option>
                         <option value="EN">English</option>
@@ -70,7 +70,7 @@
                 </div>
 
                 <button type="button" id="humBtn" aria-label="Mobile menu button">
-                    <img src="./assets/hum_white.svg" class="hidden -lg:block" alt="Humburger">
+                    <img src="./assets/hum.svg" class="hidden -lg:block" alt="Humburger">
                 </button>
 
                 <div class="flex items-center -lg:hidden h-controls-anime">
@@ -123,20 +123,41 @@
     <!-- mobile menu end -->
 
     <main>
-        <section class="about-hero-section">
+        <section class="about-hero-section relative overflow-hidden">
+            <div class="blog-bcube-anime absolute top-[23.1875vw] left-[7.8125vw]  -lg:top-[25vw] -sm:top-[237px] -sm:-left-[12px]">
+                <img src="./assets/about-hero-bcube.webp" loading="lazy" draggable="false" class="w-[96px] -sm:w-[59px]"  alt="Cube">
+            </div>
+
+            <div class="review-ocube-anime absolute top-[16.5625vw] left-[5.1875vw] -lg:left-[4vw] -sm:top-[184px] -sm:-left-[40px]">
+                <img src="./assets/about-hero-ocube.webp" loading="lazy" draggable="false" class="w-[102px] -sm:w-[65px]"  alt="Cube">
+            </div>
+
+            <div class="review-ycube-anime absolute top-[7.75vw] right-[1.125vw] -sm:top-[20px]">
+                <img src="./assets/about-hero-ycube.webp" loading="lazy" draggable="false" class="w-[89px] -sm:w-[45px]"  alt="Cube">
+            </div>
+
+            <div class="wslide-4-gcube-anime absolute bottom-[23.9375vw] right-[17.6875vw] -lg:bottom-[33vw] -lg:right-[15vw] -sm:bottom-[unset] -sm:top-[278px] -sm:-right-10">
+                <img src="./assets/about-hero-gcube.webp" loading="lazy" draggable="false" class="w-[110px] -sm:w-[72px]"  alt="Cube">
+            </div>
+
+            <div class="wslide-4-gcube-anime absolute bottom-[120px] right-0 -sm:hidden">
+                <img src="./assets/about-hero-gradient-cube.webp" loading="lazy" draggable="false" class="w-[185px]"  alt="Cube">
+            </div>
+
+
             <div class="container">
-                <div class="mx-auto max-w-[750px] w-full text-center">
+                <div class="mx-auto max-w-[995px] w-full text-center">
                     <h1 class="about-hero-title" data-aos="fade-up" data-aos-duration="500" data-aos-delay="200">
                         Golden Cube Academy
                     </h1>
-                    <p class="text-lg text-white leading-[1.5em] -sm:text-sm -sm:leading-[1.5em] -sm:max-w-[165px] -sm:text-center -sm:mx-auto" data-aos="fade-up" data-aos-duration="500" data-aos-delay="400">
+                    <p class="text-lg text-color-dark leading-[1.5em] -sm:text-sm -sm:leading-[1.5em] -sm:max-w-[165px] -sm:text-center -sm:mx-auto" data-aos="fade-up" data-aos-duration="500" data-aos-delay="400">
                         Онлайн академия сетевого бизнеса
                     </p>
                 </div>
 
                 <div class="absolute bottom-0 left-0 w-full h-full overflow-hidden"  data-aos="fade-in" data-aos-duration="500" data-aos-delay="700">
-                    <div class="w-full before:block before:pb-[100%] h-auto mx-auto z-1 max-w-[965px] absolute -bottom-[248px] left-1/2 -translate-x-1/2 -sm:-bottom-[111px] -sm:min-w-[440px]">
-                        <model-viewer style="width: 100%;  height: 100%;" src="/src/assets/models/scene.glb" class="w-full h-full absolute top-0 left-0 mx-auto z-1" environment-image="neutral" interaction-prompt="none" poster="./scripts/config.json" shadow-intensity="1" exposure="1" camera-orbit="45deg 145deg" disable-zoom shadow-softness="0" auto-rotate camera-controls> </model-viewer>
+                    <div class="w-full before:block before:pb-[100%] h-auto mx-auto z-1 max-w-[965px] absolute -bottom-[248px] left-1/2 -translate-x-1/2 -lg:max-w-[790px] -sm:-bottom-[111px] -sm:min-w-[440px]">
+                        <model-viewer style="width: 100%;  height: 100%;" src="/src/assets/models/scene.glb" class="w-full h-full absolute top-0 left-0 mx-auto z-1" environment-image="neutral" interaction-prompt="none" poster="./scripts/config.json" shadow-intensity="1" exposure="1" camera-orbit="45deg 120deg" disable-zoom shadow-softness="0" auto-rotate camera-controls> </model-viewer>
                     </div>
                     <div class="absolute left-[50%] -bottom-[801px] w-full -translate-x-1/2 max-w-[1479px]">
                         <img src="./assets/about-hero-cube-bg.webp" class="w-full" draggable="false" alt="Cubes bg">
@@ -147,15 +168,15 @@
             <div class="about-hero-section__b-shadow"></div>
         </section>
 
-        <section class="relative pt-[236px] pb-[188px] bg-[#24273C] -lg:pt-[140px] -sm:pt-16 -sm:pb-[95px] -sm:overflow-hidden">
+        <section class="relative pt-[236px] pb-[188px] -lg:pt-[140px] -sm:pt-16 -sm:pb-12 -sm:overflow-hidden">
             <img src="./assets/hero-blue-gradient-cube.png" class="bottom-[38px] -left-[132px] absolute w-[300px] -sm:w-[170px] -sm:left-[unset] -sm:-right-24 -sm:bottom-64" data-aos="fade-right" data-aos-duration="500" data-aos-delay="800" draggable="false" alt="Gradient cube">
             <div class="container">
                 <div class="flex items-center justify-between -md:flex-col">
                     <div class="w-[40.234375%] pt-7 -md:w-full -md:mb-[78px] -sm:mb-[54px]">
-                        <h2 class="title-2 white uppercase mb-8 -sm:mb-4"  data-aos="fade-up" data-aos-duration="500" data-aos-delay="200">
+                        <h2 class="title-2 uppercase mb-8 -sm:mb-4"  data-aos="fade-up" data-aos-duration="500" data-aos-delay="200">
                             Ваш <br/>профессиональ<br class="hidden -sm:block"/>ный наставник 
                         </h2>
-                        <div class="text-block text-white -sm:text-sm"  data-aos="fade-up" data-aos-duration="500" data-aos-delay="400">
+                        <div class="text-block text-color-dark -sm:text-sm"  data-aos="fade-up" data-aos-duration="500" data-aos-delay="400">
                             <p>
                                 Golden Cube — академия, в которой обучают строить сетевой бизнес и управлять командой. В нашей школе работает более 20 опытных тренеров, у каждого из которых есть своя история построения сетевого бизнеса. Мы проводим курсы, благодаря которым вы вырастете не только как сетевой предприниматель, но и как личность в целом.
                             </p>
@@ -195,7 +216,7 @@
             </div>
         </section>
 
-        <section class="relative pt-24 pb-12 z-0 -sm:pt-16 -sm:pb-8">
+        <section class="relative pt-24 pb-12 z-0 -sm:pt-12 -sm:pb-8">
             <div class="container">
                 <div class="relative before:block before:pb-[46.875%] -sm:before:pb-[100%]" data-aos="fade-up" data-aos-duration="500" data-aos-delay="200">
                     <video playsinline id="course-video" poster="./assets/about-video-poster.webp" class="w-full h-full absolute top-0 left-0 object-cover object-center after:block rounded-4xl -sm:object-center">
@@ -216,6 +237,8 @@
        </section>
 
        <section class="relative pt-12 pb-[80px] overflow-hidden -sm:pt-8 -sm:pb-8">
+        <img src="./assets/about-team-cube-pattern.webp" class="absolute bottom-0 left-0 w-[635px] -z-1 hidden -sm:block" draggable="false" alt="Cube pattern">
+
             <div class="container">
                 <div class="text-center pb-4 border-b border-b-color-dark mb-12 -sm:pb-6 -sm:mb-6" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
                     <h2 class="text-[4rem] leading-[1em] font-bold uppercase text-color-dark -md:text-[3rem] -sm:text-4xl -sm:leading-[1em] -sm:text-left" >
@@ -259,9 +282,10 @@
             </div>
        </section>
 
-       <section class="relative pt-[80px] pb-24 -md:overflow-hidden -sm:pt-8 -sm:pb-16">
+       <section class="relative pt-[80px] pb-24 z-0 -md:overflow-hidden -sm:pt-8 -sm:pb-16">
+            <img src="./assets/about-team-cube-pattern.webp" class="absolute top-0 left-0 w-[635px] -z-1" draggable="false" alt="Cube pattern">
             <div class="container relative">
-                <h3 class="title-2 uppercase text-center mb-8 -sm:mb-4" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
+                <h3 class="title-2 team-title uppercase text-center mb-8 -sm:mb-4" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
                     Наша команда
                 </h3>
                 <div class="grid grid-cols-2 gap-8 text-color-dark mb-12 -md:grid-cols-1 -md:text-center -sm:gap-4 -sm:mb-6">
@@ -301,7 +325,7 @@
 
                 <div class="swiper courses-mobile-swiper about-speaker-mode">
                     <div class="swiper-wrapper md:grid md:grid-cols-4 md:gap-8 -lg:grid-cols-3" data-aos="fade-up" data-aos-duration="500" data-aos-delay="500">
-                        <div class="speaker swiper-slide">
+                        <div class="speaker swiper-slide hover:border-color-blue">
                             <div class="speaker-media">
                                 <button type="button" aria-label="Open modal" class="speaker-play bg-color-blue">
                                     <svg  viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -311,7 +335,7 @@
                                 <img src="./assets/speaker-1.webp" class="object-center" alt="Афанасьев Прохор">
                             </div>
                             <div class="speaker-body">
-                                <h5 class="speaker__name">
+                                <h5 class="speaker__name  speaker-open">
                                     Афанасьев <br />Прохор
                                 </h5>
                                 <h6 class="speaker__role">
@@ -322,7 +346,7 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="speaker swiper-slide">
+                        <div class="speaker swiper-slide hover:border-color-blue">
                             <div class="speaker-media">
                                 <button type="button" aria-label="Open modal" class="speaker-play bg-color-blue">
                                     <svg  viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -332,7 +356,7 @@
                                 <img src="./assets/speaker-2.webp" class="object-left" alt="Гришина Фаина">
                             </div>
                             <div class="speaker-body">
-                                <h5 class="speaker__name">
+                                <h5 class="speaker__name speaker-open">
                                     Гришина <br />Фаина
                                 </h5>
                                 <h6 class="speaker__role">
@@ -343,12 +367,12 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="speaker swiper-slide">
+                        <div class="speaker swiper-slide hover:border-color-blue">
                             <div class="speaker-media">
                                 <img src="./assets/speaker-3.webp" alt="Виноградова Зинаида">
                             </div>
                             <div class="speaker-body">
-                                <h5 class="speaker__name">
+                                <h5 class="speaker__name speaker-open">
                                     Виноградова <br />Зинаида
                                 </h5>
                                 <h6 class="speaker__role">
@@ -359,7 +383,7 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="speaker swiper-slide">
+                        <div class="speaker swiper-slide hover:border-color-blue">
                             <div class="speaker-media">
                                 <button type="button" aria-label="Open modal" class="speaker-play bg-color-blue">
                                     <svg  viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -369,7 +393,7 @@
                                 <img src="./assets/speaker-4.webp" class="object-right" alt="Суханов Герман">
                             </div>
                             <div class="speaker-body">
-                                <h5 class="speaker__name">
+                                <h5 class="speaker__name speaker-open">
                                     Суханов <br />Герман
                                 </h5>
                                 <h6 class="speaker__role">
@@ -380,12 +404,12 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="speaker swiper-slide">
+                        <div class="speaker swiper-slide hover:border-color-blue">
                             <div class="speaker-media">
                                 <img src="./assets/speaker-1.webp" class="object-center" alt="Афанасьев Прохор">
                             </div>
                             <div class="speaker-body">
-                                <h5 class="speaker__name">
+                                <h5 class="speaker__name speaker-open">
                                     Афанасьев <br />Прохор
                                 </h5>
                                 <h6 class="speaker__role">
@@ -396,12 +420,12 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="speaker swiper-slide">
+                        <div class="speaker swiper-slide hover:border-color-blue">
                             <div class="speaker-media">
                                 <img src="./assets/speaker-2.webp" class="object-left" alt="Гришина Фаина">
                             </div>
                             <div class="speaker-body">
-                                <h5 class="speaker__name">
+                                <h5 class="speaker__name speaker-open">
                                     Гришина <br />Фаина
                                 </h5>
                                 <h6 class="speaker__role">
@@ -412,7 +436,7 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="speaker swiper-slide">
+                        <div class="speaker swiper-slide hover:border-color-blue">
                             <div class="speaker-media">
                                 <button type="button" aria-label="Open modal" class="speaker-play bg-color-blue">
                                     <svg  viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -422,7 +446,7 @@
                                 <img src="./assets/speaker-3.webp" alt="Виноградова Зинаида">
                             </div>
                             <div class="speaker-body">
-                                <h5 class="speaker__name">
+                                <h5 class="speaker__name speaker-open">
                                     Виноградова <br />Зинаида
                                 </h5>
                                 <h6 class="speaker__role">
@@ -433,7 +457,7 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="speaker swiper-slide">
+                        <div class="speaker swiper-slide hover:border-color-blue">
                             <div class="speaker-media">
                                 <button type="button" aria-label="Open modal" class="speaker-play bg-color-blue">
                                     <svg  viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -443,7 +467,7 @@
                                 <img src="./assets/speaker-4.webp" class="object-right" alt="Суханов Герман">
                             </div>
                             <div class="speaker-body">
-                                <h5 class="speaker__name">
+                                <h5 class="speaker__name speaker-open">
                                     Суханов <br />Герман
                                 </h5>
                                 <h6 class="speaker__role">
@@ -454,7 +478,7 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="speaker swiper-slide">
+                        <div class="speaker swiper-slide hover:border-color-blue">
                             <div class="speaker-media">
                                 <button type="button" aria-label="Open modal" class="speaker-play bg-color-blue">
                                     <svg  viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -464,7 +488,7 @@
                                 <img src="./assets/speaker-1.webp" class="object-center" alt="Афанасьев Прохор">
                             </div>
                             <div class="speaker-body">
-                                <h5 class="speaker__name">
+                                <h5 class="speaker__name speaker-open">
                                     Афанасьев <br />Прохор
                                 </h5>
                                 <h6 class="speaker__role">
@@ -475,12 +499,12 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="speaker swiper-slide">
+                        <div class="speaker swiper-slide hover:border-color-blue">
                             <div class="speaker-media">
                                 <img src="./assets/speaker-2.webp" class="object-left" alt="Гришина Фаина">
                             </div>
                             <div class="speaker-body">
-                                <h5 class="speaker__name">
+                                <h5 class="speaker__name speaker-open">
                                     Гришина <br />Фаина
                                 </h5>
                                 <h6 class="speaker__role">
@@ -491,7 +515,7 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="speaker swiper-slide">
+                        <div class="speaker swiper-slide hover:border-color-blue">
                             <div class="speaker-media">
                                 <button type="button" aria-label="Open modal" class="speaker-play bg-color-blue">
                                     <svg  viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -501,7 +525,7 @@
                                 <img src="./assets/speaker-3.webp" alt="Виноградова Зинаида">
                             </div>
                             <div class="speaker-body">
-                                <h5 class="speaker__name">
+                                <h5 class="speaker__name speaker-open">
                                     Виноградова <br />Зинаида
                                 </h5>
                                 <h6 class="speaker__role">
@@ -512,7 +536,7 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="speaker swiper-slide">
+                        <div class="speaker swiper-slide hover:border-color-blue">
                             <div class="speaker-media">
                                 <button type="button" aria-label="Open modal" class="speaker-play bg-color-blue">
                                     <svg  viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -522,7 +546,7 @@
                                 <img src="./assets/speaker-4.webp" class="object-right" alt="Суханов Герман">
                             </div>
                             <div class="speaker-body">
-                                <h5 class="speaker__name">
+                                <h5 class="speaker__name speaker-open">
                                     Суханов <br />Герман
                                 </h5>
                                 <h6 class="speaker__role">
@@ -688,12 +712,12 @@
 
                 <div class="swiper locomotives-swiper" data-aos="fade-up" data-aos-duration="500" data-aos-delay="500">
                     <div class="swiper-wrapper">
-                        <div class="speaker swiper-slide">
+                        <div class="speaker swiper-slide hover:border-color-blue">
                             <div class="speaker-media">
                                 <img src="./assets/speaker-2.webp" loading="lazy" class="object-center" alt="Афанасьев Прохор">
                             </div>
                             <div class="speaker-body">
-                                <h5 class="speaker__name">
+                                <h5 class="speaker__name speaker-open">
                                     Сергеева <br />Юлия
                                 </h5>
                                 <h6 class="speaker__role">
@@ -706,12 +730,12 @@
                                 <small class="speaker__location">г. Москва</small>
                             </div>
                         </div>
-                        <div class="speaker swiper-slide">
+                        <div class="speaker swiper-slide hover:border-color-blue">
                             <div class="speaker-media">
                                 <img src="./assets/speaker-2.webp" loading="lazy"  class="object-center" alt="Афанасьев Прохор">
                             </div>
                             <div class="speaker-body">
-                                <h5 class="speaker__name">
+                                <h5 class="speaker__name speaker-open">
                                     Лукьянов <br />Михаил
                                 </h5>
                                 <h6 class="speaker__role">
@@ -724,12 +748,12 @@
                                 <small class="speaker__location">г. Москва</small>
                             </div>
                         </div>
-                        <div class="speaker swiper-slide">
+                        <div class="speaker swiper-slide hover:border-color-blue">
                             <div class="speaker-media">
                                 <img src="./assets/speaker-2.webp" loading="lazy" class="object-center" alt="Афанасьев Прохор">
                             </div>
                             <div class="speaker-body">
-                                <h5 class="speaker__name">
+                                <h5 class="speaker__name speaker-open">
                                     Сотникова <br />Ярослава
                                 </h5>
                                 <h6 class="speaker__role">
@@ -742,12 +766,12 @@
                                 <small class="speaker__location">г. Москва</small>
                             </div>
                         </div>
-                        <div class="speaker swiper-slide">
+                        <div class="speaker swiper-slide hover:border-color-blue">
                             <div class="speaker-media">
                                 <img src="./assets/speaker-2.webp" loading="lazy" class="object-center" alt="Афанасьев Прохор">
                             </div>
                             <div class="speaker-body">
-                                <h5 class="speaker__name">
+                                <h5 class="speaker__name speaker-open">
                                     Зайцева <br />Амина
                                 </h5>
                                 <h6 class="speaker__role">
@@ -760,12 +784,12 @@
                                 <small class="speaker__location">г. Москва</small>
                             </div>
                         </div>
-                        <div class="speaker swiper-slide">
+                        <div class="speaker swiper-slide hover:border-color-blue">
                             <div class="speaker-media">
                                 <img src="./assets/speaker-2.webp" loading="lazy" class="object-center" alt="Афанасьев Прохор">
                             </div>
                             <div class="speaker-body">
-                                <h5 class="speaker__name">
+                                <h5 class="speaker__name speaker-open">
                                     Щеглов <br />Виктор
                                 </h5>
                                 <h6 class="speaker__role">
@@ -778,12 +802,12 @@
                                 <small class="speaker__location">г. Москва</small>
                             </div>
                         </div>
-                        <div class="speaker swiper-slide">
+                        <div class="speaker swiper-slide hover:border-color-blue">
                             <div class="speaker-media">
                                 <img src="./assets/speaker-2.webp" loading="lazy" class="object-center" alt="Афанасьев Прохор">
                             </div>
                             <div class="speaker-body">
-                                <h5 class="speaker__name">
+                                <h5 class="speaker__name speaker-open">
                                     Зайцева <br />Амина
                                 </h5>
                                 <h6 class="speaker__role">
@@ -812,7 +836,7 @@
                     </p>
                 </div>
                 
-                <ul class="grid grid-cols-3 gap-8 -lg:grid-cols-2 -sm:gap-0">
+                <ul class="grid grid-cols-3 gap-8 -lg:grid-cols-2 -sm:gap-0 -sm:gap-y-6">
                     <li class="future-item">
                         <strong>100+</strong>
                         <div class="future-item__divider bg-color-green"></div>
@@ -857,7 +881,7 @@
                         Напишите нам и мы свяжемся с вами для консультации
                     </p>
                     <div class="flex">
-                        <a href="#" class="btn bg-color-blue hover:bg-color-blue-dark">
+                        <a href="#" class="btn bg-color-blue hover:bg-color-blue-dark" style="box-shadow: 0px 16px 24px rgba(15, 144, 209, 0.4);">
                             Написать
                         </a>
                     </div>

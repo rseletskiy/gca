@@ -205,7 +205,11 @@ body::before {
 }
 
 .program-card {
-    @apply w-full rounded-[20px] overflow-hidden border border-transparent transition-all bg-white
+    @apply w-full rounded-[20px] overflow-hidden border border-color-100 transition-all bg-white
+}
+
+.js-edu-slider .program-card {
+    @apply border-color-dark
 }
 
 .recomended-list .program-card {
@@ -216,7 +220,7 @@ body::before {
     @apply w-full relative before:block before:pb-[49.385%] bg-gray-300 flex  bg-cover bg-no-repeat bg-center
 }
 
-.program-card__img img {
+.program-card__img > img {
     @apply w-full h-full object-cover absolute top-0 left-0 object-center -md:max-h-full
 }
 
@@ -1831,6 +1835,14 @@ input.check:focus + label {
     @apply rounded-[20px] overflow-hidden bg-white border border-color-dark transition-all
 }
 
+.locomotives-swiper .speaker {
+    @apply border-color-100
+}
+
+.team-title {
+    @apply -sm:text-lg -sm:leading-[1em]
+}
+
 .speaker-media {
     @apply relative before:block before:pb-[100%] z-0
 }
@@ -2200,12 +2212,12 @@ input.check:focus + label {
 }
 
 .about-hero-section {
-    @apply relative pt-12 pb-[733px] z-0 -lg:pb-[554px] -md:pb-[336px] -sm:pt-8
+    @apply relative pt-12 pb-[733px] z-0 -lg:pb-[554px] -md:pb-[515px] -sm:pt-8 -sm:pb-[336px]
 }
 
 .about-hero-section::before {
     content: '';
-    background: linear-gradient(360deg, #24273C 0%, #525782 100%);
+    background: linear-gradient(180deg, #FFFFFF 0%, #F1F9FF 100%);
     height: calc(100% + 112px);
     @apply absolute bottom-0 left-0 right-0 w-full -z-1
 }
@@ -2220,16 +2232,16 @@ input.check:focus + label {
     -webkit-text-fill-color: transparent;
     background-clip: text;
     text-fill-color: transparent;
-    @apply text-[6rem] leading-[1em] font-bold uppercase mb-2 -lg:text-[4.5rem] -md:text-[3.5rem] -sm:text-[3rem]
+    @apply text-[8rem] leading-[1em] font-bold uppercase mb-2 -2xl:text-[6rem] -lg:text-[4.5rem] -md:text-[3.5rem] -sm:text-[3rem]
 }
 
 .about-hero-section__b-shadow {
-    background: linear-gradient(360deg, #24273C 0%, rgba(36, 39, 60, 0.99) 14.58%, rgba(36, 39, 60, 0.96) 29.17%, rgba(36, 39, 60, 0.85) 43.75%, rgba(38, 42, 66, 0.7) 57.81%, rgba(41, 44, 70, 0.5) 71.88%, rgba(40, 44, 66, 0.19) 85.94%, rgba(51, 54, 81, 0) 100%);
+    background: linear-gradient(180deg, rgba(246, 251, 255, 0) 0%, rgba(244, 250, 255, 0.75) 50%, #F1F9FF 100%);
     @apply absolute bottom-0 left-0 right-0 w-full h-[530px] z-1 pointer-events-none -md:h-[250px] -sm:h-[340px] -sm:-bottom-0.5
 }
 
 .mission-gall-item {
-    @apply w-[18.553vw] min-w-[300px] max-h-[440px] relative before:block before:pb-[146.6666666666667%] flex rounded-4xl overflow-hidden mr-2 -lg:min-w-[200px] -sm:w-[35.46875vw] -sm:min-w-[113px] -sm:rounded-2xl -sm:min-h-[168px] -sm:before:pb-[148.6725663716814%]
+    @apply w-[300px] min-w-[300px] max-h-[440px] relative before:block before:pb-[146.6666666666667%] flex rounded-4xl overflow-hidden mr-2 -lg:min-w-[200px] -sm:w-[113px] -sm:min-w-[113px] -sm:rounded-2xl -sm:min-h-[168px] -sm:before:pb-[148.6725663716814%]
 }
 
 .mission-gall-item img {
