@@ -43,7 +43,7 @@
     <header class="header text-color-dark">
         <div class="w-[94%] mx-auto flex items-center justify-between">
             <div class="flex items-center">
-                <a href="./index.html" class="mr-16 -xl:mr-10 -sm:w-[134px] logo-anime">
+                <a href="./gc-cards.html" class="mr-16 -xl:mr-10 -sm:w-[134px] logo-anime">
                     <img src="./assets/gca-logo.webp" width="212" height="64" alt="Golden Cube Academy" class="h-auto -sm:w-full">
                 </a>
                 <nav class="-lg:hidden">
@@ -390,9 +390,12 @@
                         </div>
                         <div class="w-full before:block before:pb-[100%] h-auto mx-auto z-1">
                             <model-viewer style="width: 100%;  height: 100%;" src="/src/assets/models/scene.glb" class="w-full h-full absolute top-0 left-0 mx-auto z-1" environment-image="neutral" interaction-prompt="none" poster="./scripts/config.json" shadow-intensity="1" exposure="1" camera-orbit="45deg 115deg" disable-zoom shadow-softness="0" auto-rotate camera-controls> </model-viewer>
+
+                        <img src="./assets/pointer-mobile.svg" class="absolute bottom-0 right-0 md:hidden -sm:-bottom-[42px]" draggable="false" alt="Покрути меня">
                         </div>
                     </div>
-                    <div class="w-[48.75%] pt-[19px] -md:w-full -md:mb-16">
+                    <div class="w-[48.75%] pt-[19px] relative -md:w-full -md:mb-16">
+                        <img src="./assets/pointer-desktop.svg" class="-ml-[157px] -mt-[34px] mb-[34px] -md:hidden" data-aos="fade-left" data-aos-duration="500" data-aos-delay="100" draggable="false" alt="Покрути меня">
                         <h2 class="title-2 max-w-[405px] left-9 uppercase mb-8 -sm:mb-4" data-aos="fade-up" data-aos-duration="500" data-aos-delay="200">
                             Помогаем собрать лучшую версию себя
                         </h2>
@@ -414,8 +417,8 @@
                         </div>
                     </div>
 
-                    <div class="absolute -bottom-[76px] right-2 about-gcube-anime" data-aos="zoom-in" data-aos-duration="500" data-aos-delay="800">
-                        <img src="./assets/about-green-cube.webp" loading="lazy" class="w-[94px]" draggable="false" alt="Cube">
+                    <div class="absolute -bottom-[76px] right-2 about-gcube-anime -sm:-bottom-[300px]" data-aos="zoom-in" data-aos-duration="500" data-aos-delay="800">
+                        <img src="./assets/about-green-cube.webp" loading="lazy" class="w-[94px] -sm:w-[64px]" draggable="false" alt="Cube">
                     </div>
                     <div class="absolute -bottom-[18px] -right-20 about-ycube-anime" data-aos="zoom-in" data-aos-duration="500" data-aos-delay="1000">
                         <img src="./assets/about-yellow-cube.webp" loading="lazy" class="w-[92px]" draggable="false" alt="Cube">

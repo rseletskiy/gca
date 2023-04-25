@@ -523,16 +523,19 @@ try {
     breakpoints: {
       320: {
         slidesPerView: 1,
+        spaceBetween: 8,
       },
       480: {
         slidesPerView: 1,
+        spaceBetween: 8,
       },
-  
       640: {
         slidesPerView: 2,
+        spaceBetween: 32,
       },
       1025: {
         slidesPerView: 4,
+        spaceBetween: 32,
       },
     },
   })
@@ -1469,8 +1472,7 @@ try {
         swiper = new Swiper(".courses-mobile-swiper", {
           direction: "horizontal",
           slidesPerView: "auto",
-          spaceBetween: 16,
-          centeredSlides: true,
+          spaceBetween: 8,
           scrollbar: {
             el: ".js-edu-slider-scrollbar",
             hide: false,

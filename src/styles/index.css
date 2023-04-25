@@ -21,6 +21,10 @@ body::before {
     @apply mr-8 -xl:mr-4;
 }
 
+a {
+    cursor: pointer !important;
+}
+
 .link {
     @apply font-bold text-color-dark leading-6 transition-colors -xl:text-sm
 }
@@ -35,6 +39,10 @@ body::before {
 
 .btn {
     @apply text-white font-bold py-6 px-8 rounded-full uppercase transition-all shadow-xl shadow-inherit text-sm border-none -sm:text-[10px] leading-[1.4em] -sm:py-5 -sm:px-6;
+}
+
+.btn.dark-mode {
+    @apply text-color-dark
 }
 
 .btn-sm {
@@ -1664,6 +1672,10 @@ input.check:focus + label {
     @apply py-6 px-[50px] absolute top-0 right-0 flex items-center text-center text-white text-lg leading-[1.222em] rounded-bl-[30px] -md:text-sm -md:px-4 -md:py-3
 }
 
+.course-item-hero__label.dark-mode {
+    @apply text-color-dark
+}
+
 .course-item-hero__label img,
 .course-item-hero__label svg {
     @apply mr-2
@@ -1675,6 +1687,10 @@ input.check:focus + label {
 
 .course-item-hero__list {
     @apply grid grid-cols-4 gap-8 text-white -lg:gap-4 -md:grid-cols-1 -sm:gap-4
+}
+
+.course-item-hero__list.dark-mode {
+    @apply text-color-dark
 }
 
 .course-item-hero__list li {
@@ -1692,6 +1708,10 @@ input.check:focus + label {
 
 .course-item-hero__list li:not(:last-child) {
     @apply border-r border-r-white -md:border-r-transparent
+}
+
+.course-item-hero__list.dark-mode li:not(:last-child) {
+    @apply border-r-color-dark
 }
 
 .course-item-hero__list-title {
@@ -1732,6 +1752,10 @@ input.check:focus + label {
     @apply p-[10px] min-w-[72px] text-center text-white rounded-[50px] text-lg leading-[1.222em] mr-2 -sm:text-sm -sm:py-2 -sm:min-w-[64px]
 }
 
+.program-head.dark-mode ul li strong {
+    @apply text-color-dark
+}
+
 .program-head ul li span {
     @apply text-color-dark text-sm font-bold text-left  
 }
@@ -1768,6 +1792,10 @@ input.check:focus + label {
 
 .ac.is-active .open-icon::before {
     @apply bg-white
+}
+
+.ac.is-active .open-icon.dark-mode::before {
+    @apply bg-color-dark
 }
 
 .accordion-container.green .ac.is-active  .open-icon {
@@ -1836,7 +1864,16 @@ input.check:focus + label {
 }
 
 .locomotives-swiper .speaker {
-    @apply border-color-100
+    @apply border-color-100 -sm:max-w-[240px]
+}
+
+.about-speaker-mode,
+.courses-mobile-swiper  {
+    @apply -sm:overflow-visible
+}
+
+.courses-mobile-swiper .speaker {
+    @apply -sm:max-w-[240px]
 }
 
 .team-title {
@@ -2327,6 +2364,199 @@ input.check:focus + label {
 .course-speakers-section .js-edu-slider-scrollbar {
     background: #1B1D2B;
 }
+
+.custom-pos-1 {
+    object-position: 70% !important;
+}
+
+.locomotives-swiper {
+    overflow: visible;
+}
+
+.gc-cards-hero-media {
+    width: calc(100% - 515px - 81px);
+    @apply mr-[-49px]
+}
+
+.gc-cards-hero-media_main {
+    @apply w-full relative
+}
+
+.gc-cards-hero-media_main::before {
+    content: '';
+    @apply block pb-[100%]
+}
+
+.gc-cards-hero-media_main img {
+    box-shadow: 30px 30px 50px rgba(15, 144, 209, 0.2);
+    @apply w-full h-full object-cover object-center absolute top-0 left-0 rounded-4xl
+}
+
+.gc-cards-hero-media .img-bordered-block {
+    position: absolute;
+    filter: drop-shadow(20px 20px 20px rgba(0, 33, 50, 0.2));
+}
+
+.gc-cards-icons {
+    @apply grid grid-cols-5 gap-8
+}
+
+.gc-cards-icons__item {
+
+}
+
+.gc-cards-icons__item-icon {
+    @apply relative pl-4 z-1 mb-6
+}
+
+.gc-cards-icons__item-cube {
+    @apply absolute left-0 top-1/2 -translate-y-1/2 w-12 h-12 -z-1 opacity-10 rounded-lg
+}
+
+.gc-cards-icons__item-title {
+    @apply text-base leading-[1.313em] font-bold text-color-dark
+}
+
+.cards-what-media {
+    width: calc(100% - 515px - 141px);
+    @apply relative flex items-center justify-center before:block before:pb-[100%]
+}
+
+.cards-what-media-img {
+    box-shadow: 0px 30px 50px rgba(15, 144, 209, 0.2);
+    @apply absolute w-full h-full top-0 left-0 object-cover object-center rounded-[40px]
+}
+
+.gc-cards-dark-section {
+    background: linear-gradient(90deg, #24273C 0%, #313552 100%);
+}
+
+.gc-cards-quote-block {
+    background: linear-gradient(180deg, #858BAD 0%, #FFFFFF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    @apply max-w-[842px] mx-auto text-2xl leading-[1.583em] font-bold
+}
+
+.gc-for-whom-list {
+    @apply grid grid-cols-3 gap-12 mb-16
+}
+
+.gc-for-whom-list__item {
+    @apply pl-12 border-l border-l-color-dark
+}
+
+.gc-for-whom-list-title {
+    @apply text-2xl leading-[1.208em] text-color-dark uppercase font-bold mb-6
+}
+
+.gc-for-whom-list-text {
+    @apply text-lg leading-[1.389em] text-color-dark
+}
+
+.gc-cards-help-list {
+    @apply grid grid-cols-3 gap-8
+}
+
+.gc-cards-help-list__item {
+    
+}
+
+.gc-cards-help-list__item .gc-cards-icons__item-icon {
+    @apply mb-12
+}
+
+.gc-cards-help-list__item-title {
+    @apply text-2xl leading-[1.208em] font-bold text-color-dark mb-6
+}
+
+.gc-cards-help-list__item-list {
+
+}
+
+.gc-cards-help-list__item-list li {
+    @apply text-lg leading-[1.389em] text-color-dark max-w-[330px] relative
+}
+
+.gc-cards-help-list__item-list li::before {
+    content: '';
+    @apply h-[3px] w-[3px] rounded-[50%] bg-color-dark absolute -left-[15px] top-3
+}
+
+.gc-cards-help-list__item-list li:not(:last-child) {
+    @apply mb-2
+}
+
+.gc-cards-psychologist-title {
+    background: linear-gradient(180deg, #858BAD 0%, #FFFFFF 100%), #FFFFFF;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    @apply max-w-[515px] text-5xl leading-[1em] font-bold
+}
+
+.gc-cards-psychologist-text {
+    width: calc(100% - 515px - 32px);
+    font-style: italic;
+    letter-spacing: -0.0em;
+    @apply text-[#DBDEF3] text-lg leading-[1.667em] relative z-1
+}
+
+.gc-cards-psychologist-text > p:not(:last-child) {
+    margin-bottom: 30px;
+}
+
+.gc-cards-psychologist-text > p:last-child {
+    margin-bottom: 0;
+}
+
+.gc-cards-how-btn {
+    @apply text-sm leading-[1.429em] font-bold uppercase text-color-blue flex items-center
+}
+
+.gc-cards-how-play {
+    @apply rounded-full w-[56px] h-[56px] mr-4 flex items-center justify-center -sm:w-10 -sm:h-10
+}
+
+.gc-cards-how-play svg {
+    @apply w-6 h-6 -sm:w-4 -sm:h-4
+}
+
+.gc-cubes-how-info-wrapper {
+    width: calc(100% - 405px - 33px);
+    @apply relative
+}
+
+.gc-cubes-how-info {
+    @apply w-full bg-white rounded-4xl pt-16 pb-[50px]
+}
+
+.gc-cubes-how-info__container {
+    @apply w-[74.247%] mx-auto
+}
+
+.gc-cubes-how-info__item {
+    @apply flex items-center pt-4 pb-[15px]
+}
+
+.gc-cubes-how-info__item:not(:last-child) {
+    @apply border-b border-b-[#DDEBF6]
+}
+
+.gc-cubes-how-info__count {
+    @apply text-3.5xl leading-[1.094em] font-bold text-color-dark min-w-[77px] mr-8
+}
+
+.gc-cubes-how-info__text {
+    @apply text-lg leading-[1.222em] text-color-dark
+}
+
+
+
+
 
 
 
