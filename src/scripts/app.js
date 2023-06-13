@@ -507,6 +507,44 @@ const eduSlider = new Swiper(".js-edu-slider", {
   },
 });
 
+const productsSlider = new Swiper(".js-products-slider", {
+  slidesPerView: 4,
+  spaceBetween: 32,
+  mousewheel: {
+    forceToAxis: true
+  },
+  keyboard: true,
+  navigation: {
+    nextEl: ".product-next",
+    prevEl: ".product-prev",
+  },
+  loop: false,
+  centeredSlides:false,
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+    },
+    480: {
+      slidesPerView: 2,
+    },
+
+    640: {
+      slidesPerView: 2,
+    },
+    800: {
+      slidesPerView: 3,
+    },
+    1025: {
+      slidesPerView: 4,
+    },
+  },
+  scrollbar: {
+    el: ".js-edu-slider-scrollbar",
+    hide: false,
+    draggable: true,
+  },
+});
+
 try {
   const locomotivesSwiper = new Swiper('.locomotives-swiper', {
     slidesPerView: 4,
@@ -1313,6 +1351,44 @@ try {
     speakerModal.classList.remove('active')
     speakerModalBackdrop.classList.remove('active')
     speakerInnerSwiper.slideTo(0)
+  })
+  
+} catch (e) {
+  console.log(e);
+}
+
+try {
+  const speakerBtns = document.querySelectorAll('.gc-cards-how-btn');
+  const speakerPlayBtns = document.querySelectorAll('.speaker-play');
+  const speakerModal = document.querySelector('.js-speakers-dialog');
+  const speakerModalBackdrop = document.querySelector('.modal-backdrop');
+  const closeSpeakerModalBtn = speakerModal.querySelector('.modal-dialog-close')
+  speakerBtns.forEach(btn => {
+    btn.addEventListener('click', function(e) {
+      e.preventDefault()
+      speakerModal.classList.add('active');
+      speakerModalBackdrop.classList.add('active');
+    })
+  })
+
+  speakerPlayBtns.forEach(btn => {
+    btn.addEventListener('click', function(e) {
+      e.preventDefault()
+      speakerModal.classList.add('active');
+      speakerModalBackdrop.classList.add('active');
+    })
+  })
+
+  closeSpeakerModalBtn.addEventListener('click', function(e) {
+    e.preventDefault()
+    speakerModal.classList.remove('active')
+    speakerModalBackdrop.classList.remove('active')
+  })
+
+  speakerModalBackdrop.addEventListener('click', function(e) {
+    e.preventDefault()
+    speakerModal.classList.remove('active')
+    speakerModalBackdrop.classList.remove('active')
   })
   
 } catch (e) {

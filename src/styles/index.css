@@ -1719,7 +1719,7 @@ input.check:focus + label {
 }
 
 .will-learn-list {
-    @apply grid grid-cols-3 gap-x-16 gap-y-8 -md:grid-cols-2 -sm:grid-cols-1   -sm:gap-y-3  
+    @apply grid grid-cols-3 gap-x-16 gap-y-8 -md:grid-cols-2 -sm:grid-cols-1 -sm:gap-y-3  
 }
 
 .will-learn-list li {
@@ -2336,7 +2336,8 @@ input.check:focus + label {
 }
 
 .locomotives-swiper .js-edu-slider-pagination.swiper-pagination-progressbar, 
-.locomotives-swiper .js-edu-slider-scrollbar.swiper-scrollbar {
+.locomotives-swiper .js-edu-slider-scrollbar.swiper-scrollbar,
+.js-products-slider .js-edu-slider-scrollbar.swiper-scrollbar {
     @apply bg-color-200
 }
 
@@ -2375,7 +2376,7 @@ input.check:focus + label {
 
 .gc-cards-hero-media {
     width: calc(100% - 515px - 81px);
-    @apply mr-[-49px]
+    @apply mr-[-49px] -2xl:mr-0
 }
 
 .gc-cards-hero-media_main {
@@ -2398,23 +2399,23 @@ input.check:focus + label {
 }
 
 .gc-cards-icons {
-    @apply grid grid-cols-5 gap-8
+    @apply grid grid-cols-5 gap-8 -lg:grid-cols-3 -md:grid-cols-2 -sm:grid-cols-1
 }
 
 .gc-cards-icons__item {
-
+    @apply -sm:flex -sm:flex-col -sm:items-center -sm:text-center
 }
 
 .gc-cards-icons__item-icon {
-    @apply relative pl-4 z-1 mb-6
+    @apply relative pl-4 z-1 mb-6 
 }
 
 .gc-cards-icons__item-cube {
-    @apply absolute left-0 top-1/2 -translate-y-1/2 w-12 h-12 -z-1 opacity-10 rounded-lg
+    @apply absolute left-0 top-1/2 -translate-y-1/2 w-12 h-12 -z-1 opacity-10 rounded-lg -md:w-10 -md:h-10
 }
 
 .gc-cards-icons__item-title {
-    @apply text-base leading-[1.313em] font-bold text-color-dark
+    @apply text-base leading-[1.313em] font-bold text-color-dark -sm:max-w-[87%]
 }
 
 .cards-what-media {
@@ -2441,48 +2442,55 @@ input.check:focus + label {
 }
 
 .gc-for-whom-list {
-    @apply grid grid-cols-3 gap-12 mb-16
+    @apply grid grid-cols-3 gap-12 mb-16 -lg:grid-cols-1 -md:gap-8
 }
 
 .gc-for-whom-list__item {
-    @apply pl-12 border-l border-l-color-dark
+    @apply pl-12 border-l border-l-color-dark -md:pl-6
 }
 
 .gc-for-whom-list-title {
-    @apply text-2xl leading-[1.208em] text-color-dark uppercase font-bold mb-6
+    @apply text-2xl leading-[1.208em] text-color-dark uppercase font-bold mb-6 -md:text-lg -md:mb-2
 }
 
 .gc-for-whom-list-text {
-    @apply text-lg leading-[1.389em] text-color-dark
+    @apply text-lg leading-[1.389em] text-color-dark -md:text-sm
 }
 
 .gc-cards-help-list {
-    @apply grid grid-cols-3 gap-8
+    @apply grid grid-cols-3 gap-8 -md:grid-cols-1
 }
 
 .gc-cards-help-list__item {
-    
+    @apply -md:pl-6
 }
 
 .gc-cards-help-list__item .gc-cards-icons__item-icon {
-    @apply mb-12
+    @apply mb-12 -md:mb-6
+}
+
+.gc-cards-icons__item-icon img {
+    @apply -md:w-[48px] -md:h-[48px]
 }
 
 .gc-cards-help-list__item-title {
-    @apply text-2xl leading-[1.208em] font-bold text-color-dark mb-6
+    @apply text-2xl leading-[1.208em] font-bold text-color-dark mb-6 -md:text-lg -md:mb-4
+}
+
+.gc-cards-help-list__item-title br {
+    @apply -md:hidden
 }
 
 .gc-cards-help-list__item-list {
-
 }
 
 .gc-cards-help-list__item-list li {
-    @apply text-lg leading-[1.389em] text-color-dark max-w-[330px] relative
+    @apply text-lg leading-[1.389em] text-color-dark max-w-[330px] relative -md:max-w-none -md:text-sm
 }
 
 .gc-cards-help-list__item-list li::before {
     content: '';
-    @apply h-[3px] w-[3px] rounded-[50%] bg-color-dark absolute -left-[15px] top-3
+    @apply h-[3px] w-[3px] rounded-[50%] bg-color-dark absolute -left-[15px] top-3 -md:top-2
 }
 
 .gc-cards-help-list__item-list li:not(:last-child) {
@@ -2495,18 +2503,18 @@ input.check:focus + label {
     -webkit-text-fill-color: transparent;
     background-clip: text;
     text-fill-color: transparent;
-    @apply max-w-[515px] text-5xl leading-[1em] font-bold
+    @apply max-w-[515px] text-5xl leading-[1em] font-bold -lg:max-w-none -lg:mb-12 -md:text-3xl -md:mb-6
 }
 
 .gc-cards-psychologist-text {
     width: calc(100% - 515px - 32px);
     font-style: italic;
     letter-spacing: -0.0em;
-    @apply text-[#DBDEF3] text-lg leading-[1.667em] relative z-1
+    @apply text-[#DBDEF3] text-lg leading-[1.667em] relative z-1 -lg:w-full -md:text-sm
 }
 
 .gc-cards-psychologist-text > p:not(:last-child) {
-    margin-bottom: 30px;
+    @apply mb-[30px] -md:mb-4
 }
 
 .gc-cards-psychologist-text > p:last-child {
@@ -2514,11 +2522,17 @@ input.check:focus + label {
 }
 
 .gc-cards-how-btn {
-    @apply text-sm leading-[1.429em] font-bold uppercase text-color-blue flex items-center
+    transition: all .4s ease;
+    @apply text-sm leading-[1.429em] font-bold uppercase text-color-blue flex items-center hover:text-color-blue-dark
 }
 
 .gc-cards-how-play {
+    transition: all .4s ease;
     @apply rounded-full w-[56px] h-[56px] mr-4 flex items-center justify-center -sm:w-10 -sm:h-10
+}
+
+.gc-cards-how-btn:hover .gc-cards-how-play {
+    @apply bg-color-blue-dark
 }
 
 .gc-cards-how-play svg {
@@ -2531,11 +2545,11 @@ input.check:focus + label {
 }
 
 .gc-cubes-how-info {
-    @apply w-full bg-white rounded-4xl pt-16 pb-[50px]
+    @apply w-full bg-white rounded-4xl pt-16 pb-[50px] -md:pt-8 -md:pb-8
 }
 
 .gc-cubes-how-info__container {
-    @apply w-[74.247%] mx-auto
+    @apply w-[74.247%] mx-auto -md:w-[85%]
 }
 
 .gc-cubes-how-info__item {
@@ -2547,11 +2561,11 @@ input.check:focus + label {
 }
 
 .gc-cubes-how-info__count {
-    @apply text-3.5xl leading-[1.094em] font-bold text-color-dark min-w-[77px] mr-8
+    @apply text-3.5xl leading-[1.094em] font-bold text-color-dark min-w-[77px] mr-8 -md:text-2xl -md:min-w-[48px] -md:mr-4
 }
 
 .gc-cubes-how-info__text {
-    @apply text-lg leading-[1.222em] text-color-dark
+    @apply text-lg leading-[1.222em] text-color-dark -md:text-sm
 }
 
 
@@ -2586,6 +2600,22 @@ input.check:focus + label {
     filter: drop-shadow(-2px -2px 2px #888);
 }
 
+.product-next.swiper-button-disabled,
+.product-prev.swiper-button-disabled {
+    opacity: 0;
+    visibility: hidden;
+}
+
+
+@media (max-width: 1200px) {
+    .gc-cards-hero-media {
+        width: calc(100% - 540px);
+    }
+
+    .cards-what-media  {
+        width: calc(100% - 405px - 110px);
+    }
+}
 
 @media (max-width: 1024px) {
     .news-list {

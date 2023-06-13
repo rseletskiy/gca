@@ -129,6 +129,13 @@ module.exports = {
         "blue-gradient":
           "linear-gradient(0deg, #0F90D1 -0.02%, #1EBCF5 100.02%)",
         "dark-gradient": "linear-gradient(90deg, #24273C 0%, #313552 100%)",
+        "text-blue-gradient": "linear-gradient(180deg, #0F90D1 0%, #313552 100%)"
+      },
+      boxShadow: {
+        'image': '30px 30px 50px rgba(15, 144, 209, 0.2)',
+        'image-gold-border': 'inset 0 0 0 2px #DCA606',
+        'block-xl': '10px 20px 20px rgba(15, 144, 209, 0.12)',
+        'block-lg': '0px 10px 20px rgba(15, 144, 209, 0.1)',
       },
       screens: {
         "-2xl": { max: "1360px" },
